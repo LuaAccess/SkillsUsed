@@ -1,0 +1,47 @@
+name: Skill Validate
+
+# Validates SKILL.md frontmatter (name + description present) across all skills.
+# Lightweight check — no external API calls, no secrets required.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'skills/**'
+      - '.github/workflows/skill-validate.yml'
+  pull_request:
+    paths:
+      - 'skills/**'
+      - '.github/workflows/skill-validate.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read        # read-only — no write/admin needed
+    steps:
+      - name: Checkout
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+
+      - name: Validate SKILL.md frontmatter
+        shell: bash
+        run: |
+          set -euo pipefail
+          errors=0
+          for skill_file in skills/*/SKILL.md; do
+            name=$(awk '/^---/{f=!f;next} f && /^name:/{print;exit}' "$skill_file")
+            desc=$(awk '/^---/{f=!f;next} f && /^description:/{print;exit}' "$skill_file")
+            if [ -z "$name" ]; then
+              echo "ERROR: Missing 'name' in $skill_file"
+              errors=$((errors+1))
+            fi
+            if [ -z "$desc" ]; then
+              echo "ERROR: Missing 'description' in $skill_file"
+              errors=$((errors+1))
+            fi
+          done
+          if [ "$errors" -gt 0 ]; then
+            echo "$errors validation error(s) found."
+            exit 1
+          fi
+          echo "All SKILL.md files passed validation."
