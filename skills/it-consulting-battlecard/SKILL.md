@@ -1,4 +1,4 @@
-[it-consulting-battlecard_SKILL.md](https://github.com/user-attachments/files/29187646/it-consulting-battlecard_SKILL.md)
+
 ---
 name: it-consulting-battlecard
 description: Build a competitive battlecard or positioning guide for an IT consulting bid or sales situation. Use when competing against another system integrator, MSP, or technology vendor on a specific deal, when preparing for a competitive sales conversation, when a client mentions a competitor by name, or when you need to sharpen your differentiation for a specific account or segment. Trigger phrases include "we're competing against", "client mentioned [competitor]", "how do we beat [competitor]", "build a battlecard for", "competitive positioning for", "what's our edge vs", or "they also talked to [other vendor]". Do NOT use for general market research (superclaude:deep-research), full proposal writing (consulting-proposal), or brand monitoring (brightdata-plugin:brand-listening).
