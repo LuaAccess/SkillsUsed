@@ -1,5 +1,5 @@
 [Uploading meeting-intelligence_SKILL.md…]()
----
+
 name: meeting-intelligence
 description: Post-meeting debrief and analysis for IT consulting and sales meetings. Use when pasting meeting notes, transcript, or pipeline output after a client call, discovery session, stakeholder meeting, or sales meeting — especially when you want to extract hidden signals, decode client behaviour, map power dynamics, identify next moves, or audit your own performance. Trigger phrases include "MODE 1", "meeting debrief", "what just happened in that meeting", "analyse my meeting notes", "what did I miss", "decode this client", or any paste of raw meeting output for analysis. Do NOT use for scheduling meetings, drafting agendas, or preparing for a future meeting — those go to client-communication or legal:meeting-briefing.
 argument-hint: "<paste meeting notes, transcript, or pipeline output>"
