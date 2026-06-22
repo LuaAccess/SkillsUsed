@@ -1,8 +1,8 @@
+[cultural-intelligence.md](https://github.com/user-attachments/files/29188656/cultural-intelligence.md)
 # Cultural Intelligence Reference — Filipino / Asian Business Context
 
 Apply automatically in every MODE 1 debrief and every MODE 2 scenario. Do not wait to be asked.
 
----
 
 ## Signal Decoder Table
 
@@ -22,7 +22,6 @@ Apply automatically in every MODE 1 debrief and every MODE 2 scenario. Do not wa
 | Client stops introducing you to internal people | Busy period | Gating access — they are reassessing your fit |
 | Laughter + rapport without agenda progress | Unproductive meeting | Highest trust signal — this is how PH clients signal comfort. Business follows. |
 
----
 
 ## Power Structure Mapping — Philippine Enterprise
 
@@ -45,7 +44,6 @@ Always ask: who in this account is briefing the approver *after* you leave the r
 - Who stays **silent** → either irrelevant or the most important person in the room
 - Who **laughs first** → often the informal cultural authority, not the org chart authority
 
----
 
 ## Communication Style Calibration
 
@@ -67,7 +65,6 @@ When a Filipino client or contact switches from English to Filipino (or Taglish)
 - Do not treat this as casual — it is data
 - Luther should match the language shift when he has the relationship to do so — it signals respect and belonging
 
----
 
 ## Cultural Power Dynamics in Competitive Situations
 
@@ -76,7 +73,6 @@ When a Filipino client or contact switches from English to Filipino (or Taglish)
 - In government and quasi-government: **process compliance** often matters more than the best solution. Winning requires understanding the procurement narrative, not just the technical evaluation.
 - **Brand prestige** carries real weight in PH enterprise — especially banking, insurance, and conglomerates. Counter this by reframing brand as risk ("Large SIs rotate resources").
 
----
 
 ## What Someone With EQ Score 5 Would Do Differently
 
