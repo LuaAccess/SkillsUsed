@@ -1,8 +1,8 @@
+[Uploading escalation-engine.md…]()
 # Escalation Engine — Difficulty Calibration Rules
 
 Used by virtual-self-ai to calibrate challenge level in real time based on Luther's responses.
 
----
 
 ## Core Escalation Logic
 
@@ -15,7 +15,6 @@ Used by virtual-self-ai to calibrate challenge level in real time based on Luthe
 | Gives a generic answer | Demand specificity. "What does this look like for a mid-size PH bank, specifically?" |
 | Avoids emotional or cultural dimension | Reframe the entire problem around the dimension he avoided |
 
----
 
 ## Escalation Layers (in order)
 
@@ -32,7 +31,6 @@ When Luther is succeeding, escalate by adding from this list:
 9. **Ethical edge** — introduce a situation where the highest-leverage move conflicts with a relationship or integrity constraint
 10. **Meta-challenge** — ask him to explain the system he just navigated, from the outside
 
----
 
 ## Pattern Library — Name These When You See Them
 
@@ -50,7 +48,6 @@ When Luther repeats a pattern, name it explicitly so he can recognise it next ti
 | **Lone Wolf** | Plans a solution that depends entirely on his own execution | Leverage requires other people. Who else moves this forward? |
 | **Timeline Compression** | Assumes the decision will happen faster than it will in PH enterprise | Relationships and hierarchy extend timelines. Build for the real clock. |
 
----
 
 ## Mental Models Bank
 
@@ -71,7 +68,6 @@ Offer one of these at the end of every session as the "mental model you should h
 | **Commitment and consistency** | Get small yeses before the big ask — people align their behaviour with prior commitments |
 | **Social proof in hierarchy** | In PH enterprise, "who else has done this" often matters more than "how good is this" |
 
----
 
 ## Session Tracking Template
 
