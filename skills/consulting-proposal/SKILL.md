@@ -1,4 +1,4 @@
-[consulting-proposal_SKILL.md](https://github.com/user-attachments/files/29187611/consulting-proposal_SKILL.md)
+
 ---
 name: consulting-proposal
 description: Draft, structure, or review an IT consulting proposal or statement of work. Use when writing a new proposal for a client engagement, responding to an RFP or RFQ, packaging a solution recommendation into a formal document, building a pricing narrative, or restructuring a proposal that lost traction. Trigger phrases include "write a proposal", "draft an SOW", "we need to respond to this RFP", "package this solution", "help me price this engagement", "proposal for [client]", or "why did my proposal lose". Do NOT use for internal project status reports (operations:status-report), contract review (legal:review-contract), or competitive analysis (it-consulting-battlecard).
