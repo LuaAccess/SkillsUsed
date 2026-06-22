@@ -1,4 +1,6 @@
----
+# Skill Scores — Luther's Baseline
+
+Last updated: June 2026
 
 ## Foundational Skills
 
