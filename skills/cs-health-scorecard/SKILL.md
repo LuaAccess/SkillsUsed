@@ -1,6 +1,6 @@
 ---
 name: cs-health-scorecard
-description: "Build a customer health scorecard for a specific account. Use when asked to score account health, assess renewal risk, build a health dashboard, or evaluate an account's likelihood to renew or expand. Produces a structured health scorecard with a RAG status, dimension scores, key risks, and recommended actions."
+description: "Diagnose the current health state of a customer account. Use when asked to score account health, check if an account is at risk, assess how healthy a client is, build a health dashboard, or evaluate likelihood to renew or expand. Also triggers on: is this account at risk, how is [client] doing, health check on [account]. Produces a structured health scorecard with RAG status, dimension scores, key risks, and recommended actions. Do NOT use when the user already knows the health state and wants a renewal strategy — use renewal-playbook instead."
 ---
 
 # Customer Health Scorecard Skill
