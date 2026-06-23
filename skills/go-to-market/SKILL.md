@@ -1,6 +1,6 @@
 ---
 name: go-to-market
-description: "Create go-to-market assets for any product or feature. Use when asked for a GTM plan, positioning statement, product launch plan, messaging pillars, use cases, or feature/benefit list. Generates a full GTM pack: positioning statement, messaging pillars, feature-to-benefit mapping, and role-specific use cases."
+description: "Create go-to-market assets for a product, service, or practice launch. Use when asked for a GTM plan, positioning statement, product or service launch plan, messaging pillars, use cases, or feature/benefit list. Also triggers on: how do we position our [service], entering a new market or vertical, launch our [practice area], how should we pitch [service] to [industry], messaging for [offering]. Applies to both client GTM work and internal service positioning for IT consulting practices. Generates a full GTM pack: positioning statement, messaging pillars, feature-to-benefit mapping, and role-specific use cases."
 ---
 
 # Go-To-Market Skill
