@@ -1,4 +1,3 @@
-
 ---
 name: account-plan
 description: "Build a structured account plan for any key customer or target account. Use when asked to create an account plan, key account strategy, strategic account review, or territory plan. Produces a complete account plan with relationship map, growth opportunities, risks, and 90-day action plan."
