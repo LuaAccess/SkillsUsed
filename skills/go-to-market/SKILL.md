@@ -1,4 +1,4 @@
-[SKILL.md](https://github.com/user-attachments/files/29154960/SKILL.md)
+
 ---
 name: go-to-market
 description: "Create go-to-market assets for any product or feature. Use when asked for a GTM plan, positioning statement, product launch plan, messaging pillars, use cases, or feature/benefit list. Generates a full GTM pack: positioning statement, messaging pillars, feature-to-benefit mapping, and role-specific use cases."
