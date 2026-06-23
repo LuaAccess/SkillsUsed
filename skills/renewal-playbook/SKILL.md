@@ -1,6 +1,6 @@
 ---
 name: renewal-playbook
-description: "Build a structured renewal playbook for a customer account. Use when asked to plan a renewal, structure a renewal negotiation, prepare for an expansion conversation, or build a renewal strategy for at-risk or healthy accounts. Produces a renewal brief with health assessment, negotiation strategy, objection responses, expansion levers, and a timeline."
+description: "Build an action-oriented renewal strategy for a customer account. Use when asked to plan a renewal, structure a renewal negotiation, prepare for an expansion or upsell conversation, or build a renewal strategy for at-risk or healthy accounts. Also triggers on: contract coming up, client contract expires, renewal in [X] months, upsell conversation, how do we keep [client]. Use AFTER account health is understood — for health diagnosis first, use cs-health-scorecard. Produces a renewal brief with negotiation strategy, objection responses, expansion levers, and a timeline."
 ---
 
 # Renewal Playbook Skill
