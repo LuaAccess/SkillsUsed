@@ -1,6 +1,6 @@
 ---
 name: executive-update
-description: "Transform detailed product updates into concise executive briefings. Use when asked to write an executive update, leadership update, product update for the exec team, or a C-suite product briefing. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps."
+description: "Write a concise executive-level briefing for a client, stakeholder, or leadership audience. Use when asked to write an executive update, executive summary for a client, leadership update, project status for C-suite, board-level update on an engagement, or brief the CTO/CEO/leadership on a project or account. Also triggers on: exec summary, update for the board, senior stakeholder update, project health for leadership. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps."
 ---
 
 # Executive Update Skill
