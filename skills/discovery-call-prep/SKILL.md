@@ -1,6 +1,6 @@
 ---
 name: discovery-call-prep
-description: "Prepare a structured discovery call plan for any prospect. Use when asked to prepare for a sales call, discovery call, prospect meeting, or first call with a potential customer. Produces a call brief with research, hypotheses, questions, and success criteria."
+description: "Prepare a structured discovery call plan for any sales prospect or client meeting. Use when asked to prepare for a sales call, discovery call, prospect meeting, first call with a potential customer, pre-call research for a client, or meeting prep for a deal. Also triggers on: prep for client meeting, meeting with [company], prepare for [client] call, what should I ask [prospect]. Produces a call brief with research, hypotheses, questions, and success criteria. Do NOT use when the goal is user research or problem validation interviews — use discovery-interview-guide instead."
 ---
 
 # Discovery Call Prep Skill
