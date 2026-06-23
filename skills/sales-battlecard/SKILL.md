@@ -1,6 +1,6 @@
 ---
 name: sales-battlecard
-description: "Create a competitive sales battlecard for any competitor. Use when asked to build a battlecard, competitive comparison, sales cheat sheet, or objection handling guide for a specific competitor. Produces a one-page battlecard with positioning, differentiators, objection responses, and landmines."
+description: "Create a tactical one-page sales battlecard for use in an active deal or sales conversation. Use when asked to build a battlecard, sales cheat sheet, objection handling guide, or competitive comparison for a specific competitor in the context of a live opportunity or upcoming sales call. Produces a one-page battlecard with positioning, differentiators, objection responses, and landmines. Do NOT use for strategic competitive research or market analysis — use competitor-teardown instead."
 ---
 
 # Sales Battlecard Skill
