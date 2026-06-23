@@ -1,6 +1,6 @@
 ---
 name: proposal-writer
-description: "Write a structured sales proposal or commercial proposal for any deal. Use when asked to write a proposal, sales proposal, commercial proposal, statement of work, or quote document. Produces a complete proposal with problem statement, solution, investment, and next steps."
+description: "Write a structured commercial proposal or engagement document for any deal. Use when asked to write a proposal, sales proposal, commercial proposal, statement of work, SOW, scope of work, quote document, RFP response, engagement proposal, or when the user says scope this engagement, write up what we discussed, or client wants a quote. Produces a complete proposal with problem statement, solution, investment, and next steps."
 ---
 
 # Proposal Writer Skill
