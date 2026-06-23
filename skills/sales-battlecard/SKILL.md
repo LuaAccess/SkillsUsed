@@ -1,4 +1,3 @@
-
 ---
 name: sales-battlecard
 description: "Create a competitive sales battlecard for any competitor. Use when asked to build a battlecard, competitive comparison, sales cheat sheet, or objection handling guide for a specific competitor. Produces a one-page battlecard with positioning, differentiators, objection responses, and landmines."
