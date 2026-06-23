@@ -1,6 +1,6 @@
 ---
 name: discovery-interview-guide
-description: "Create a structured user discovery interview guide with screener questions, a discussion guide, and a synthesis framework. Use when planning user interviews, customer discovery sessions, Jobs-to-be-Done research, or problem validation. Produces a complete guide covering warm-up, problem exploration, and a per-session synthesis template."
+description: "Create a structured research interview guide for understanding users, clients, or market problems. Use when planning user interviews, customer discovery sessions, Jobs-to-be-Done research, problem validation, or any interview where the goal is learning and insight — not selling or scoping. Also triggers on: interview guide, research questions for [topic], how do I interview [person], client research session. Produces a complete guide covering screener questions, warm-up, problem exploration, and a per-session synthesis template. Do NOT use for sales discovery calls or prospect meetings — use discovery-call-prep instead."
 ---
 
 # Discovery Interview Guide Skill
