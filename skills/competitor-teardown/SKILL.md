@@ -1,6 +1,6 @@
 ---
 name: competitor-teardown
-description: "Produce a structured competitive analysis for any product or market. Use when asked for a competitor analysis, competitive teardown, market comparison, SWOT, or positioning map. Generates a structured teardown with positioning map, feature comparison, messaging gaps, and strategic recommendations."
+description: "Produce a strategic competitive analysis for research, planning, or positioning purposes. Use when asked for a competitor analysis, competitive teardown, market comparison, SWOT, positioning map, or when researching what a competitor does and how we compare to them strategically. Also triggers on: research [vendor], how do we stack up against [company], understand the competitive landscape, what does [competitor] offer. Generates a structured teardown with positioning map, feature comparison, messaging gaps, and strategic recommendations. Do NOT use when preparing for a specific live sales deal — use sales-battlecard instead."
 ---
 
 # Competitor Teardown Skill
