@@ -1,11 +1,11 @@
 ---
 name: renewal-playbook
-description: "Build an action-oriented renewal strategy for a customer account. Use when asked to plan a renewal, structure a renewal negotiation, prepare for an expansion or upsell conversation, or build a renewal strategy for at-risk or healthy accounts. Also triggers on: contract coming up, client contract expires, renewal in [X] months, upsell conversation, how do we keep [client]. Use AFTER account health is understood — for health diagnosis first, use cs-health-scorecard. Produces a renewal brief with negotiation strategy, objection responses, expansion levers, and a timeline. Do NOT use when the user only wants to assess account health with no renewal action yet — use cs-health-scorecard instead."
+description: "Build a structured renewal playbook for a customer account. Use when asked to plan a renewal, structure a renewal negotiation, prepare for an expansion conversation, or build a renewal strategy for at-risk or healthy accounts. Produces a renewal brief with health assessment, negotiation strategy, objection responses, expansion levers, and a timeline. Best used after cs-health-scorecard has been run. Do NOT use for new prospect proposals — use proposal-writer instead."
 ---
 
 # Renewal Playbook Skill
 
-This skill produces a complete renewal playbook for a specific customer account, covering health assessment, commercial strategy, negotiation preparation, expansion opportunity mapping, and a step-by-step timeline. Output is ready for the CSM or account team to execute 90–180 days before renewal.
+Produces a complete renewal playbook for a specific customer account — health assessment, commercial strategy, negotiation preparation, expansion opportunity mapping, and a step-by-step timeline. Output is ready for the CSM or account team to execute 90–180 days before renewal.
 
 ## Required Inputs
 
@@ -26,8 +26,8 @@ Ask the user for these if not provided:
 # Renewal Playbook: [Account Name]
 
 **Renewal date:** [Date]
-**Current ARR:** [£/$/€ X]
-**Target renewal ARR:** [£/$/€ X — flat / +X% expansion / contraction risk]
+**Current ARR:** ₱/$/£[X]
+**Target renewal ARR:** ₱/$/£[X — flat / +X% expansion / contraction risk]
 **Health status:** [Green / Amber / Red]
 **CSM:** [Name]
 **Account executive:** [Name]
@@ -40,7 +40,7 @@ Ask the user for these if not provided:
 | Dimension | Score (1–5) | Evidence |
 |---|---|---|
 | **Product adoption** | [X/5] | [e.g. 3 of 5 purchased seats active; core feature used weekly] |
-| **Business outcomes** | [X/5] | [e.g. Customer reports X% improvement in [metric]; no formal ROI review done] |
+| **Business outcomes** | [X/5] | [e.g. Customer reports X% improvement in [metric]] |
 | **Relationship depth** | [X/5] | [e.g. Strong champion in [name/role]; limited exec sponsorship] |
 | **Support & satisfaction** | [X/5] | [e.g. 2 open P2 tickets; last NPS 7; no escalations in 6 months] |
 | **Commercial engagement** | [X/5] | [e.g. Invoice paid on time; no discount pressure raised yet] |
@@ -78,8 +78,6 @@ Ask the user for these if not provided:
 
 ## 4. Value Story
 
-Build the ROI narrative for the renewal conversation:
-
 **Headline result:** [e.g. "[Account] saved X hours/week or reduced [metric] by X% using [product]"]
 
 **Evidence sources:**
@@ -88,21 +86,17 @@ Build the ROI narrative for the renewal conversation:
 - [ ] Support resolution time improvement
 - [ ] Customer-provided testimonial or case study quotes
 
-**Value gaps to close before renewal:** [Are there outcomes the customer expected but hasn't seen yet? What's the plan to close these?]
+**Value gaps to close before renewal:** [Outcomes the customer expected but hasn't seen yet — and the plan to close them]
 
 ---
 
 ## 5. Expansion Opportunity
 
-Map upside beyond flat renewal:
-
 | Opportunity | Type | Estimated value | Likelihood | Timing |
 |---|---|---|---|---|
-| [Seat expansion — [dept] wants to add 10 users] | Upsell | [+£X ARR] | [High] | [Renewal or +3M] |
-| [Cross-sell — [Product B] use case identified] | Cross-sell | [+£X ARR] | [Medium] | [+6M] |
-| [Multi-year commitment] | Discount for term | [+£X TCV / -X% discount] | [Low] | [At renewal] |
-
-**Expansion play:** [Which opportunity to lead with, and the sequence for raising it in the renewal conversation]
+| [Seat expansion — [dept]] | Upsell | [+₱/$/£X ARR] | [High] | [Renewal or +3M] |
+| [Cross-sell — [Product B]] | Cross-sell | [+₱/$/£X ARR] | [Medium] | [+6M] |
+| [Multi-year commitment] | Discount for term | [+₱/$/£X TCV] | [Low] | [At renewal] |
 
 ---
 
@@ -112,38 +106,31 @@ Map upside beyond flat renewal:
 
 | Scenario | Probability | ARR outcome | Response strategy |
 |---|---|---|---|
-| **Flat renewal** | [X%] | [£X — same as current] | [Accept; plant seeds for +6M expansion] |
-| **Expansion** | [X%] | [£X] | [Lead with ROI evidence; pitch seat or feature expansion] |
-| **Contraction risk** | [X%] | [£X — downgrade to lower tier] | [Propose phased commitment; demonstrate path to full adoption] |
-| **Churn risk** | [X%] | [£0] | [Escalate to leadership; executive sponsor engagement] |
+| **Flat renewal** | [X%] | [₱/$/£X] | [Accept; plant seeds for +6M expansion] |
+| **Expansion** | [X%] | [₱/$/£X] | [Lead with ROI evidence; pitch seat or feature expansion] |
+| **Contraction risk** | [X%] | [₱/$/£X] | [Propose phased commitment; demonstrate path to full adoption] |
+| **Churn risk** | [X%] | [₱/$/£0] | [Escalate to leadership; executive sponsor engagement] |
 
 **Discount guardrails:**
 - Floor discount: [X% — do not go below without VP approval]
 - Triggers for discount: [Multi-year / volume / reference customer commitment]
-- What to ask for in return: [Reference case study / G2 review / executive intro / case study participation]
-
-**Pricing flexibility:**
-- [e.g. Can offer monthly billing in exchange for 24-month commit]
-- [e.g. Can offer X seats free in exchange for expansion commitment]
+- What to ask for in return: [Reference case study / G2 review / executive intro]
 
 ---
 
 ## 7. Objection Responses
 
-Prepare for the most likely objections:
-
 **"The price is too high"**
-> Anchor on value delivered: "[Customer] achieved [X outcome] — at [£X ARR], that's [£Y per outcome / hour saved / user]. What would it cost to deliver that outcome without us?"
-> If budget is genuinely constrained, explore: phased payment, reduction in scope rather than full churn, multi-year pricing.
+> Anchor on value delivered. If budget is genuinely constrained, explore: phased payment, reduction in scope, multi-year pricing.
 
 **"We're not seeing enough adoption"**
-> Acknowledge, then commit: "You're right — [X seats] are actively using [core feature] out of [Y]. We want to fix this. Here's our 60-day plan: [exec sponsor on enablement call / training session / in-product nudge campaign]."
+> Acknowledge, then commit with a 60-day adoption plan with named owner.
 
 **"We're evaluating [Competitor]"**
-> Don't panic. Ask: "What's driving the evaluation — is it specific features, pricing, or something else?" Then map gaps honestly. Offer a feature roadmap preview if relevant. Get clarity on their criteria and timeline before responding defensively.
+> Ask: "What's driving the evaluation?" Map gaps honestly. Get clarity on criteria and timeline before responding defensively.
 
 **"We need to reduce spend this quarter"**
-> Separate the commercial conversation from the value conversation. Offer to protect the relationship with a reduced scope today with a committed expansion trigger at a business milestone. Avoid discounting without a reason.
+> Separate the commercial conversation from the value conversation. Offer reduced scope today with expansion trigger at a business milestone.
 
 ---
 
@@ -151,13 +138,13 @@ Prepare for the most likely objections:
 
 | Week | Action | Owner | Notes |
 |---|---|---|---|
-| **W–16** (4 months out) | Internal renewal review — health, expansion opportunity, risk | CSM | Flag to leadership if Red |
-| **W–12** | QBR / executive business review — ROI evidence delivered | CSM + AE | Book 45–60 min with economic buyer |
-| **W–10** | Champion 1:1 — pulse check on satisfaction and upcoming priorities | CSM | Uncover internal dynamics before commercial discussion |
+| **W–16** | Internal renewal review — health, expansion, risk | CSM | Flag to leadership if Red |
+| **W–12** | QBR / EBR — ROI evidence delivered | CSM + AE | Book 45–60 min with economic buyer |
+| **W–10** | Champion 1:1 — pulse check | CSM | Uncover internal dynamics before commercial discussion |
 | **W–8** | Expansion conversation — plant seeds, share roadmap | AE | Do not lead with pricing |
-| **W–6** | Send renewal proposal — pricing, terms, options | AE | Include multi-year option |
-| **W–4** | Negotiation — address objections, finalise commercial terms | AE + CSM | Escalate to VP if >X% discount required |
-| **W–2** | Legal / procurement — contract redlines, signature process | AE + Legal | |
+| **W–6** | Send renewal proposal | AE | Include multi-year option |
+| **W–4** | Negotiation — address objections, finalise terms | AE + CSM | Escalate to VP if >X% discount required |
+| **W–2** | Legal / procurement — contract redlines | AE + Legal | |
 | **W–0** | Signed. Handoff to post-renewal success plan | CSM | Thank the champion; begin next cycle |
 
 ---
@@ -170,29 +157,42 @@ Prepare for the most likely objections:
 - [ ] At least one expansion conversation started
 - [ ] ROI evidence documented and accepted by customer
 
----
-
 ## Quality Checks
 
 - [ ] Stakeholder map includes the economic buyer — not just the champion
 - [ ] Risk register has a mitigation for every H/H risk
-- [ ] Value story uses product data and business outcomes, not just feature lists
+- [ ] Value story uses product data and business outcomes — not feature lists
 - [ ] Commercial strategy includes a floor discount and a reason-to-discount framework
 - [ ] Timeline starts at least 90 days before renewal date
-- [ ] Objection responses are specific to this account, not generic
+- [ ] Objection responses are specific to this account
 
 ## Anti-Patterns
 
 - [ ] Do not start renewal conversations less than 90 days before the renewal date for accounts over $50K ARR
-- [ ] Do not build a renewal strategy without first honestly assessing account health — wishful thinking leads to last-minute churn
-- [ ] Do not treat all renewal objections as negotiating tactics — some objections signal genuine dissatisfaction that requires resolution first
-- [ ] Do not offer discounts as the first response to price objections — explore value gaps before reducing price
-- [ ] Do not close the renewal without confirming the expansion opportunity — every renewal is also an expansion conversation
+- [ ] Do not build a renewal strategy without first honestly assessing account health
+- [ ] Do not treat all renewal objections as negotiating tactics — some signal genuine dissatisfaction
+- [ ] Do not offer discounts as the first response to price objections
+- [ ] Do not close the renewal without confirming the expansion opportunity
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill and `cs-health-scorecard` are a chain. If you have not run a health scorecard yet, run it first — this playbook assumes you know the health status.
+- This skill is for existing customer renewals only. For new prospect proposals, use `proposal-writer`.
+
+**Known failure modes:**
+- Objection responses are often written as generic scripts. Prompt: "Rewrite the objection responses using the specific account context I've provided."
+- Timeline is sometimes compressed — Claude may default to a 30-day timeline. Always check that the timeline starts at W–16 (4 months out) for accounts above your ARR threshold.
+- Expansion opportunity is often left blank when no explicit signals were provided. Prompt: "Based on the account profile, what are the most likely expansion opportunities even without explicit signals?"
+
+**Filipino/Asian market specifics:**
+- Philippine renewal conversations are often delayed by internal approval chains that are longer than Western equivalents. Build 2-3 extra weeks into the timeline for government-linked and conglomerate accounts.
+- Do not raise price increases in the same conversation as the renewal ask. In Philippine accounts, this is perceived as a bait-and-switch and damages trust significantly.
+- The champion may not have authority to approve the renewal — identify the economic buyer separately and plan a parallel engagement track.
+- Verbal commitments ("oo, itutuloy namin") do not substitute for a signed PO. Always confirm the procurement process and who issues the PO.
 
 ## Example Trigger Phrases
-
 - "Build a renewal playbook for [Account Name] renewing in [Month]"
 - "Help me plan the renewal strategy for an at-risk customer"
 - "Prepare a renewal brief for my QBR with [Company]"
 - "What's my renewal strategy for a Red account coming up in 60 days?"
-- "Create a renewal and expansion plan for [Account]"
