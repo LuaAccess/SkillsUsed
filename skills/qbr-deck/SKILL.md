@@ -15,7 +15,7 @@ Ask for these if not already provided:
 - **Last quarter's goals** (from previous QBR or kickoff)
 - **Usage and adoption data** — key metrics for the quarter
 - **Support summary** — tickets raised, resolution time, any escalations
-- **Business outcomes the customer cares about** — what success looks like for them
+- **Business outcomes the customer cares about**
 - **Product updates or new features** relevant to this customer
 - **Goals for next quarter**
 - **Any open commercial conversations** (expansion, renewal, at-risk signals)
@@ -24,7 +24,7 @@ Ask for these if not already provided:
 
 - Lead with customer outcomes, not product features
 - Every metric should connect to a business result the customer cares about
-- The agenda is a conversation, not a presentation — build in time for customer input at every stage
+- The agenda is a conversation, not a presentation — build in time for customer input
 - Close with mutual commitments, not just vendor actions
 
 ## Output Format
@@ -52,20 +52,15 @@ Ask for these if not already provided:
 | 0:55 | Actions and mutual commitments | CSM |
 | 1:00 | Close | |
 
-*Talking point: "We've kept today to 60 minutes. We want as much of this to be a conversation as possible — please push back, redirect, and ask questions throughout."*
-
 ---
 
 ## Slide 2: Where We Are Together (2 min)
 
-**Partnership snapshot:**
 - **Customer since:** [Date]
-- **Contract value:** £/$/€[ARR]/year
+- **Contract value:** ₱/$/£[ARR]/year
 - **Renewal date:** [Date]
 - **Active users:** [N] of [N] licensed seats ([X]% adoption)
 - **Products / modules active:** [List]
-
-*Talking point: "Before we dive in — a quick picture of where we are. [X] months in, [Y] active users, and this is our [Nth] QBR together."*
 
 ---
 
@@ -75,55 +70,29 @@ Ask for these if not already provided:
 |---|---|---|
 | [Goal 1] | [What we committed to] | ✅ Achieved / ⚠️ Partial / ❌ Missed |
 | [Goal 2] | [What we committed to] | ✅ Achieved / ⚠️ Partial / ❌ Missed |
-| [Goal 3] | [What we committed to] | ✅ Achieved / ⚠️ Partial / ❌ Missed |
 
 For any partial or missed goal: state what happened and what changes next quarter.
-
-*Talking point: "Let's start with accountability. Here's what we said we'd achieve last quarter — let's be honest about where we landed."*
 
 ---
 
 ## Slide 4: Usage and Adoption (5 min)
-
-**Quarter-over-quarter trend:**
 
 | Metric | [Q-1] | [Q] | Change |
 |---|---|---|---|
 | Monthly active users | [N] | [N] | +/-X% |
 | Sessions per user per week | [N] | [N] | +/-X% |
 | [Key feature 1] adoption | [X]% | [X]% | +/-X% |
-| [Key feature 2] adoption | [X]% | [X]% | +/-X% |
-
-**Highlights:**
-- [Positive adoption trend to call out]
-- [Feature or workflow with strongest engagement]
-
-**Opportunity:**
-- [Feature with low adoption that could drive more value — link to their goals]
-
-*Talking point: "Usage is [up / stable / something we want to talk about]. The area I'd like to focus on is [feature] — we're not seeing the adoption we'd expect given [their goal], and I want to understand why."*
 
 ---
 
 ## Slide 5: Business Impact — Value Delivered (10 min)
 
-Lead with outcomes, not activity.
-
 **[Outcome 1: customer's primary success metric]**
 - Before: [baseline]
 - Now: [current state]
-- Impact: [quantified business result — time saved, revenue influenced, cost reduced, risk mitigated]
+- Impact: [quantified business result]
 
-**[Outcome 2]**
-- [Same structure]
-
-**[Outcome 3]**
-- [Same structure]
-
-**Customer evidence** (use if available):
 > "[Quote from champion or user about value experienced]"
-
-*Talking point: "This is the section I most want your input on. Are these the outcomes that matter to your business? Are there other ways you're measuring success that we should be tracking?"*
 
 ---
 
@@ -133,46 +102,26 @@ Lead with outcomes, not activity.
 |---|---|---|---|
 | Tickets raised | [N] | [N] | ↑ / → / ↓ |
 | Average resolution time | [X hrs] | [X hrs] | ↑ / → / ↓ |
-| P1 / critical issues | [N] | [N] | ↑ / → / ↓ |
 | CSAT score | [X/10] | [X/10] | ↑ / → / ↓ |
-
-**Notable issues this quarter:**
-- [Any escalation or major ticket — brief summary and resolution]
-
-**What we're doing differently:**
-- [Any process change or improvement based on support patterns]
 
 ---
 
 ## Slide 7: What's Coming — Roadmap Preview (5 min)
 
-Focus only on what's relevant to this customer's goals. Do not dump the full roadmap.
-
 | Feature / Improvement | Expected | Why it matters to [Account Name] |
 |---|---|---|
 | [Feature 1] | [Q+1] | [Direct link to their goal or pain point] |
-| [Feature 2] | [Q+1 / Q+2] | [Direct link] |
-| [Feature 3] | [H2] | [Direct link] |
-
-*Talking point: "I've filtered the roadmap to what I think matters most to your team. I'd love your reaction — are these the right priorities from your perspective?"*
 
 ---
 
 ## Slide 8: Next Quarter — Your Goals (10 min)
 
-**Customer input section — facilitate, don't present.**
-
 Prompt questions:
 - "What does success look like for your team in [next quarter]?"
 - "What's the biggest challenge you're trying to solve in the next 90 days?"
-- "Is there anything about the way you're using [product] you want to change?"
-
-**Capture live:**
 
 | Goal for next quarter | Owner (customer) | How we'll support it | How we'll measure it |
 |---|---|---|---|
-| [Goal 1] | [Name] | [CSM / product action] | [Metric] |
-| [Goal 2] | [Name] | [CSM / product action] | [Metric] |
 
 ---
 
@@ -180,22 +129,11 @@ Prompt questions:
 
 **[Your company] commits to:**
 1. [Specific action — owner — by when]
-2. [Specific action — owner — by when]
-3. [Specific action — owner — by when]
 
 **[Account Name] commits to:**
 1. [Specific action — owner — by when]
-2. [Specific action — owner — by when]
 
-**Next touchpoint:** [Date of next check-in or mid-quarter review]
-
----
-
-## Slide 10: Thank You + Open Q&A (5 min)
-
-- Recap the one headline from today: [The single most important thing you want them to remember]
-- Confirm actions are captured and shared after the call
-- Ask: "Is there anything we didn't cover today that you wanted to raise?"
+**Next touchpoint:** [Date]
 
 ---
 
@@ -203,11 +141,10 @@ Prompt questions:
 
 - [ ] Usage data pulled and QoQ comparison calculated
 - [ ] Last QBR goals reviewed — status confirmed before the meeting
-- [ ] Business outcomes framed in customer language (not product language)
+- [ ] Business outcomes framed in customer language
 - [ ] Roadmap filtered to this account's specific use cases
-- [ ] Customer's goals for next quarter researched or pre-confirmed with champion
 - [ ] Executive sponsor briefed on any sensitive topics before the call
-- [ ] Actions from previous QBR reviewed — any outstanding items addressed
+- [ ] Actions from previous QBR reviewed
 
 ## Quality Checks
 
@@ -219,8 +156,30 @@ Prompt questions:
 
 ## Anti-Patterns
 
-- [ ] Do not fill the QBR with product activity metrics — lead with business outcomes the customer cares about
-- [ ] Do not present a roadmap without linking each item to a customer goal — vendor priorities are not a QBR agenda
-- [ ] Do not run a QBR as a one-sided presentation — it must include structured time for the customer to speak
-- [ ] Do not close a QBR without documented mutual commitments with named owners on both sides
-- [ ] Do not skip the "what's not working" slide — suppressing problems erodes trust and misses renewal risks
+- [ ] Do not fill the QBR with product activity metrics — lead with business outcomes
+- [ ] Do not present a roadmap without linking items to customer goals
+- [ ] Do not run a QBR as a one-sided presentation
+- [ ] Do not close a QBR without documented mutual commitments
+- [ ] Do not skip the "what's not working" slide — suppressing problems erodes trust
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill produces a presentation structure. For the internal account strategy document, use `account-plan`. For the renewal negotiation, use `renewal-playbook`.
+- If the meeting is the first meeting with a prospect (not existing customer), use `discovery-call-prep` instead.
+
+**Known failure modes:**
+- Slide 5 (Business Impact) is the most frequently underpopulated section — Claude will produce a framework with placeholders if no outcome data is provided. You must supply real numbers. Push back with: "Use the usage data I provided and infer what the business impact was."
+- Roadmap preview is sometimes too long — Claude may include all roadmap items. Prompt: "Include only the 2-3 roadmap items most relevant to this customer's stated goals."
+- Mutual commitments section is sometimes left as vendor-only actions. Prompt: "Add at least 2 specific commitments from the customer side."
+
+**Filipino/Asian market specifics:**
+- Philippine executive attendees often arrive late or send a delegate. Build the deck so the first 5 minutes can be skipped without losing the narrative — put the key headline on Slide 2, not Slide 5.
+- Avoid highlighting missed goals too directly in front of senior Philippine executives — it can cause the client to lose face. Frame as "here's what we're adjusting" rather than "here's what we missed."
+- QBRs in Philippine accounts are often attended by more people than expected. Design the deck for a mixed audience (executive + technical + end users) — avoid deep technical detail in the main flow, offer it as an appendix.
+- "Mabuti naman" (loosely: "it's fine") as a response to your value narrative may signal politeness, not genuine satisfaction. Follow up with: "What would make this even more useful for your team?"
+
+## Example Trigger Phrases
+- "Build a QBR deck for [Account Name] for Q[X]"
+- "Prepare my quarterly business review with [company]"
+- "Help me structure my EBR for [account]"
