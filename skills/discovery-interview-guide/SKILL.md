@@ -1,6 +1,6 @@
 ---
 name: discovery-interview-guide
-description: "Create a structured research interview guide for understanding users, clients, or market problems. Use when planning user interviews, customer discovery sessions, Jobs-to-be-Done research, problem validation, or any interview where the goal is learning and insight — not selling or scoping. Also triggers on: interview guide, research questions for [topic], how do I interview [person], client research session. Produces a complete guide covering screener questions, warm-up, problem exploration, and a per-session synthesis template. Do NOT use for sales discovery calls or prospect meetings — use discovery-call-prep instead."
+description: "Create a structured user discovery interview guide with screener questions, a discussion guide, and a synthesis framework. Use when planning user interviews, customer discovery sessions, Jobs-to-be-Done research, or problem validation. Produces a complete guide covering warm-up, problem exploration, and a per-session synthesis template. Do NOT use for sales prospect calls — use discovery-call-prep instead."
 ---
 
 # Discovery Interview Guide Skill
@@ -22,13 +22,11 @@ Build rapport. Get them talking. Don't discuss the topic yet.
 - "What tools do you rely on most day-to-day?"
 
 ### 2. Context Setting (10 min)
-Understand their world before diving into the problem space.
 - "Walk me through how you currently [handle the domain area]."
 - "What does that process look like from start to finish?"
 - "Who else is involved when you do this?"
 
 ### 3. Problem Exploration (25 min) — THE CORE
-Surface pain without leading.
 - "Tell me about the last time you had to [relevant task]. What happened?"
 - "What was the hardest part of that?"
 - "How did you handle it?"
@@ -39,7 +37,6 @@ Surface pain without leading.
 ⚠️ **Do not mention your product or feature during this phase.**
 
 ### 4. Current Solutions (10 min)
-Understand the competitive landscape from their perspective.
 - "What tools or workarounds do you use today for this?"
 - "What do you like about [current solution]? What frustrates you?"
 - "Have you tried other approaches? What happened?"
@@ -64,7 +61,6 @@ Understand the competitive landscape from their perspective.
 3. [Disqualifier question] → Disqualify if: [answer]
 
 **Interview Guide:**
-
 [Full structured guide using the format above, customised to the specific research topic]
 
 **Synthesis Template** (fill after each interview):
@@ -88,7 +84,7 @@ Ask the user for these if not provided:
 - **Target participant profile** (role, behaviour, company type)
 - **Session length** (30 / 45 / 60 / 90 minutes)
 - **Number of interviews planned**
-- **Known hypotheses to test or avoid confirming prematurely** (optional)
+- **Known hypotheses to test** (optional)
 
 ## Quality Checks
 
@@ -98,18 +94,32 @@ Ask the user for these if not provided:
 - [ ] Synthesis template included for per-session notes
 - [ ] Screener questions identify and disqualify wrong participants
 
-## Guidelines
-
-- Recommend 5–8 interviews to reach thematic saturation for most discovery questions
-- Always record with permission — transcripts beat notes
-- If user is new to interviewing: remind them to stay silent after asking a question (aim for 80/20 participant-to-interviewer talking ratio)
-- Never synthesise during the interview — do it after, when you can look across sessions
-- Flag confirmation bias: if user writes questions that lead toward a predetermined answer, rewrite them as open-ended alternatives
-
 ## Anti-Patterns
 
-- [ ] Do not use future-tense questions ("Would you use this?") — hypothetical responses do not predict real behaviour and produce false confidence in an idea
-- [ ] Do not mention your product or solution before problem exploration is complete — doing so anchors the participant's responses and invalidates the discovery
-- [ ] Do not synthesise across fewer than 5 interviews — themes from 2–3 interviews reflect anecdote, not pattern; wait for saturation
-- [ ] Do not write screener questions that are too easy to pass — if participants can guess the "right" answer, you will recruit the wrong people
-- [ ] Do not treat participant opinions as evidence of future behaviour — what people say they will do consistently diverges from what they actually do
+- [ ] Do not use future-tense questions ("Would you use this?")
+- [ ] Do not mention your product or solution before problem exploration is complete
+- [ ] Do not synthesise across fewer than 5 interviews
+- [ ] Do not write screener questions that are too easy to pass
+- [ ] Do not treat participant opinions as evidence of future behaviour
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill and `discovery-call-prep` both involve structured questioning. Use THIS skill for user research and problem validation interviews. Use `discovery-call-prep` for sales calls with new prospects.
+- Mutual exclusion: if the goal is to qualify a deal or advance a sale → `discovery-call-prep`. If the goal is to understand user behaviour or validate a problem hypothesis → this skill.
+
+**Known failure modes:**
+- Generated interview guides sometimes include future-tense questions despite the instruction. Review every question before use — any "would you," "could you imagine," or "do you think you would" should be rewritten as past-tense.
+- Screener questions are sometimes too generic (anyone could pass). Prompt: "Make the screener questions specific enough to filter out people who don't have the exact behaviour we're researching."
+- Synthesis template is sometimes omitted from short sessions. Prompt: "Include the synthesis template even for a 30-minute guide."
+
+**Filipino/Asian market specifics:**
+- Filipino interview participants tend to give socially desirable answers rather than honest ones, especially early in the interview. The warm-up phase is critical — invest more time than you think you need before moving to problem exploration.
+- Switching to Filipino or Taglish mid-interview often signals genuine engagement or emotional relevance. When a participant code-switches, the content of that statement is usually the most honest thing they've said. Note it explicitly.
+- Direct questions about pain ("what's your biggest problem with X?") often produce polite deflection. Use storytelling prompts instead: "Tell me about the last time X went wrong" produces richer responses in Philippine cultural contexts.
+- Hierarchy affects candour — participants may give more honest answers if the interviewer is a peer rather than someone senior. Consider who conducts the interview.
+
+## Example Trigger Phrases
+- "Build a discovery interview guide for [research topic]"
+- "I need to run user interviews about [problem area] — help me structure them"
+- "Create a Jobs-to-be-Done interview guide for [product/feature]"
