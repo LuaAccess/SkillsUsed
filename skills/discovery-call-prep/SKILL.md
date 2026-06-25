@@ -1,6 +1,6 @@
 ---
 name: discovery-call-prep
-description: "Prepare a structured discovery call plan for any sales prospect or client meeting. Use when asked to prepare for a sales call, discovery call, prospect meeting, first call with a potential customer, pre-call research for a client, or meeting prep for a deal. Also triggers on: prep for client meeting, meeting with [company], prepare for [client] call, what should I ask [prospect]. Produces a call brief with research, hypotheses, questions, and success criteria. Do NOT use when the goal is user research or problem validation interviews — use discovery-interview-guide instead."
+description: "Prepare a structured discovery call plan for any prospect. Use when asked to prepare for a sales call, discovery call, prospect meeting, or first call with a potential customer. Produces a call brief with research, hypotheses, questions, and success criteria. Do NOT use for renewal conversations, QBRs, or post-sale meetings — use renewal-playbook or qbr-deck instead."
 ---
 
 # Discovery Call Prep Skill
@@ -101,11 +101,28 @@ This call is NOT successful if we only pitched and got "sounds interesting, send
 
 ## Anti-Patterns
 
-- [ ] Do not write the call hypothesis after the call — hypotheses written post-hoc are rationalisations, not testable predictions
-- [ ] Do not open with a product pitch before establishing the prospect's problem — leading with pitch signals you are not there to learn, which closes discovery conversations
-- [ ] Do not use closed questions in the discovery phase ("Do you have this problem?") — they produce yes/no answers that confirm bias rather than reveal pain
-- [ ] Do not skip the "not successful" definition in success criteria — a call that ends with "send me more info" feels like progress but is not a qualified next step
-- [ ] Do not treat all prospect research equally — recent news (last 90 days) is more relevant to call context than static company facts from LinkedIn
+- [ ] Do not write the call hypothesis after the call
+- [ ] Do not open with a product pitch before establishing the prospect's problem
+- [ ] Do not use closed questions in the discovery phase
+- [ ] Do not skip the "not successful" definition in success criteria
+- [ ] Do not treat all prospect research equally — recent news beats static facts
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill and `discovery-interview-guide` both involve structured questioning. Use THIS skill for sales/prospect calls with new prospects. Use `discovery-interview-guide` for user research and problem validation interviews with existing users.
+- If the contact is an existing customer, stop — use `renewal-playbook` or `qbr-deck` instead.
+
+**Known failure modes:**
+- Claude may generate generic questions not tailored to the specific industry or role. If output feels generic, add the prospect's industry, company stage, and your specific solution to your input.
+- Research summary may hallucinate recent news. Always verify funding/news claims before the call.
+- Hypothesis section is sometimes skipped when input is sparse. If it's missing, prompt: "Write the call hypothesis even with limited information — label assumptions."
+
+**Filipino/Asian market specifics:**
+- "We'll think about it" often signals internal hierarchy approval is needed, not genuine interest. Do not treat it as a soft yes.
+- First calls in Philippine enterprise accounts are often relationship-building, not qualification. Do not push hard BANT qualification in call 1 — it reads as transactional and damages rapport.
+- Indirect responses to budget questions are normal. Rephrase as: "What does the approval process look like for something like this?"
+- Silence after a proposal is not rejection — follow up gently after 3-5 business days.
 
 ## Example Trigger Phrases
 - "Prepare me for a discovery call with [company/contact]"
