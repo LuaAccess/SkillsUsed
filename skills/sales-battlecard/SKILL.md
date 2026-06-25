@@ -1,11 +1,11 @@
 ---
 name: sales-battlecard
-description: "Create a tactical one-page sales battlecard for use in an active deal or sales conversation. Use when asked to build a battlecard, sales cheat sheet, objection handling guide, or competitive comparison for a specific competitor in the context of a live opportunity or upcoming sales call. Produces a one-page battlecard with positioning, differentiators, objection responses, and landmines. Do NOT use for strategic competitive research or market analysis — use competitor-teardown instead."
+description: "Create a competitive sales battlecard for any competitor. Use when asked to build a battlecard, competitive comparison, sales cheat sheet, or objection handling guide for a specific competitor. Produces a one-page battlecard with positioning, differentiators, objection responses, and landmines. Do NOT use for full strategic competitive analysis — use competitor-teardown instead."
 ---
 
 # Sales Battlecard Skill
 
-Produces a practical one-page competitive battlecard that sales reps can use in calls — not a theoretical analysis.
+Produces a practical one-page competitive battlecard that sales reps can use live on calls — not a theoretical analysis.
 
 ## Required Inputs
 - **Your product/company**
@@ -82,15 +82,31 @@ We lose when: [Honest scenario — e.g. primary driver is lowest upfront cost]
 - [ ] "When we lose" is included and honest
 - [ ] Battlecard has a review date
 
+## Anti-Patterns
+
+- [ ] Do not minimise genuine competitor strengths — unprepared reps lose credibility
+- [ ] Do not write differentiators without proof points — a claim without evidence is marketing
+- [ ] Do not make the battlecard exhaustive — it is a one-page cheat sheet, not a full analysis
+- [ ] Do not include a "When we lose" section that is dishonestly optimistic
+- [ ] Do not skip the review date — an outdated battlecard is worse than no battlecard
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill and `competitor-teardown` both involve competitor analysis. Use THIS skill for a quick sales enablement one-pager for a specific rep use case. Use `competitor-teardown` for a deep strategic analysis for product planning or investor materials.
+- Mutual exclusion: if the request mentions SWOT, positioning map, or messaging gaps analysis → route to `competitor-teardown`, not here.
+
+**Known failure modes:**
+- Claude may write objection responses that sound scripted. If they feel unnatural, ask: "Rewrite these as conversational — how a good rep would actually say it."
+- "When we lose" section is sometimes softened or omitted. If missing, explicitly prompt: "Add a 'When we lose' section — be honest about loss scenarios."
+- Battlecard may become too long (over 1 page when printed). Trim ruthlessly — battlecards longer than 1 page are not used on live calls.
+
+**Filipino/Asian market specifics:**
+- Direct competitor badmouthing is more culturally damaging in Philippine accounts than in Western markets. Landmine questions must be framed as genuine curiosity, not attacks.
+- Price objections in Philippine SME and mid-market accounts are often real budget constraints, not negotiating tactics. Provide a TCO or phased payment angle, not just a value pitch.
+- Relationship-based competitors (vendors who have a personal relationship with the client) are harder to displace on logic alone. Flag when a competitor has a relationship advantage — the sales approach shifts.
+
 ## Example Trigger Phrases
 - "Build a battlecard against [competitor]"
 - "Create a competitive cheat sheet for [competitor]"
 - "Write objection handling for [competitor] comparisons"
-
-## Anti-Patterns
-
-- [ ] Do not minimise or ignore genuine competitor strengths — sales reps who encounter them unprepared lose credibility
-- [ ] Do not write differentiators without proof points — a claim without evidence is marketing, not a battlecard
-- [ ] Do not make the battlecard exhaustive — it is a one-page cheat sheet, not a full competitive analysis
-- [ ] Do not include a "When we lose" section that is dishonestly optimistic — honest loss scenarios build rep trust
-- [ ] Do not skip the review date — an outdated battlecard with wrong information is worse than no battlecard
