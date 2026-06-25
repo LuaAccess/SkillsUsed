@@ -1,6 +1,6 @@
 ---
 name: cs-health-scorecard
-description: "Diagnose the current health state of a customer account. Use when asked to score account health, check if an account is at risk, assess how healthy a client is, build a health dashboard, or evaluate likelihood to renew or expand. Also triggers on: is this account at risk, how is [client] doing, health check on [account]. Produces a structured health scorecard with RAG status, dimension scores, key risks, and recommended actions. Do NOT use when the user already knows the health state and wants a renewal strategy — use renewal-playbook instead."
+description: "Build a customer health scorecard for a specific account. Use when asked to score account health, assess renewal risk, build a health dashboard, or evaluate an account's likelihood to renew or expand. Produces a structured health scorecard with a RAG status, dimension scores, key risks, and recommended actions. Do NOT use for full renewal strategy — use renewal-playbook after scoring."
 ---
 
 # Customer Health Scorecard Skill
@@ -35,20 +35,6 @@ Score each dimension 1–5. Weight as shown. Calculate weighted total out of 100
 - 60–79: Amber (at risk, needs attention)
 - 0–59: Red (high churn risk, escalate)
 
-## Programmatic Helper
-
-This skill ships with a stdlib-only Python script that applies the weights above and converts the weighted total to a RAG status — so the headline score is computed identically every time and weights always sum to 100%.
-
-```bash
-# Five scores 1-5 in order: adoption engagement outcomes support commercial
-python3 scripts/health_score.py --scores 4 3 4 2 5 --account "Acme Corp"
-
-# Or from JSON (lets you override the default weights per account/segment)
-python3 scripts/health_score.py --input account.json
-```
-
-It returns the per-dimension weighted points, the **total out of 100**, and the **RAG band** (Green ≥80, Amber 60–79, Red <60) with a one-line next step. Run it to set the headline number, then write the dimension detail and actions below around it. Add `--json` for downstream tooling.
-
 ## Output Format
 
 ---
@@ -56,7 +42,7 @@ It returns the per-dimension weighted points, the **total out of 100**, and the 
 # Customer Health Scorecard: [Account Name]
 
 **CSM:** [Name] | **Tier:** [Enterprise / Mid-Market / SMB]
-**ARR:** £/$/€[X] | **Renewal date:** [Date] | **Days to renewal:** [N]
+**ARR:** ₱/$/£[X] | **Renewal date:** [Date] | **Days to renewal:** [N]
 **Overall health:** [Green / Amber / Red] — [Score]/100
 **Last updated:** [Date]
 
@@ -138,9 +124,9 @@ It returns the per-dimension weighted points, the **total out of 100**, and the 
 
 | Scenario | Probability | ARR at risk |
 |---|---|---|
-| Full renewal at current ARR | [X]% | £/$/€0 |
-| Renewal with contraction | [X]% | £/$/€[X] |
-| Churn | [X]% | £/$/€[full ARR] |
+| Full renewal at current ARR | [X]% | ₱/$/£0 |
+| Renewal with contraction | [X]% | ₱/$/£[X] |
+| Churn | [X]% | ₱/$/£[full ARR] |
 
 **Recommended renewal play:** [Expand / Hold / Save / Manage out]
 
@@ -149,10 +135,10 @@ It returns the per-dimension weighted points, the **total out of 100**, and the 
 ## Quality Checks
 
 - [ ] Score is based on data, not gut feel — each dimension has evidence
-- [ ] Risks are specific (not "low engagement" — something like "executive sponsor left in March, no replacement identified")
+- [ ] Risks are specific (not "low engagement" — name the specific signal)
 - [ ] Actions have owners and deadlines
 - [ ] Renewal probability is calibrated against pipeline reality
-- [ ] Trend arrows reflect direction of change vs. last scorecard, not just current state
+- [ ] Trend arrows reflect direction of change vs. last scorecard
 
 ## Anti-Patterns
 
@@ -161,3 +147,24 @@ It returns the per-dimension weighted points, the **total out of 100**, and the 
 - [ ] Do not list risks vaguely — "low engagement" without specifics is not actionable
 - [ ] Do not leave recommended actions without named owners and deadlines
 - [ ] Do not conflate product usage frequency with product value delivery
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill scores the account and surfaces risks. For the full renewal strategy and negotiation plan, use `renewal-playbook` after running this scorecard.
+- This skill and `renewal-playbook` are designed as a chain: health-scorecard → renewal-playbook. Do not use renewal-playbook without first running a health assessment.
+
+**Known failure modes:**
+- Claude will produce scores of 3/5 across the board when input data is thin. This is a false "Amber" — challenge it. If you can't support a score with evidence, note it as "score assumed — data needed."
+- Recommended actions are sometimes too generic ("have a QBR"). Push for specificity: "What is the specific outcome this QBR must achieve?"
+- Renewal forecast probabilities are sometimes unrealistically optimistic. Ask: "What evidence supports this renewal probability? If none, set it as unknown."
+
+**Filipino/Asian market specifics:**
+- NPS scores from Philippine clients trend lower than Western benchmarks due to cultural modesty — an NPS of 6-7 from a Filipino client may indicate genuine satisfaction, not passive status. Contextualise scores accordingly.
+- Champion strength is harder to assess because Filipino champions rarely escalate issues directly. Silence is not satisfaction — probe for "what's been frustrating lately" in your 1:1s.
+- Payment delays in Philippine accounts often signal internal procurement process issues, not financial distress. Distinguish between process delays and genuine commercial risk before escalating.
+
+## Example Trigger Phrases
+- "Score the health of [Account Name]"
+- "Build a health scorecard for [company] renewing in [month]"
+- "What is the renewal risk for [account]?"
