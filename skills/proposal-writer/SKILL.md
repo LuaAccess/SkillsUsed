@@ -1,6 +1,6 @@
 ---
 name: proposal-writer
-description: "Write a structured commercial proposal or engagement document for any deal. Use when asked to write a proposal, sales proposal, commercial proposal, statement of work, SOW, scope of work, quote document, RFP response, engagement proposal, or when the user says scope this engagement, write up what we discussed, or client wants a quote. Produces a complete proposal with problem statement, solution, investment, and next steps."
+description: "Write a structured sales proposal or commercial proposal for any deal. Use when asked to write a proposal, sales proposal, commercial proposal, statement of work, or quote document. Produces a complete proposal with problem statement, solution, investment, and next steps. Do NOT use for battlecards, GTM plans, or renewal negotiations — use sales-battlecard, go-to-market, or renewal-playbook instead."
 ---
 
 # Proposal Writer Skill
@@ -63,8 +63,8 @@ Writes commercial proposals that win business — structured around the prospect
 
 | Item | Description | Investment |
 |---|---|---|
-| [Component 1] | [Description] | £[amount] |
-| **Total** | | **£[total]** |
+| [Component 1] | [Description] | ₱/$/£[amount] |
+| **Total** | | **₱/$/£[total]** |
 
 **Payment terms:** [Terms]
 **Included:** [What is in]
@@ -96,11 +96,28 @@ Writes commercial proposals that win business — structured around the prospect
 
 ## Anti-Patterns
 
-- [ ] Do not lead with the solution before establishing that the problem is understood — the proposal must demonstrate problem comprehension first
-- [ ] Do not use vague investment language like "competitive pricing" — every proposal must state a specific price or range
-- [ ] Do not omit a "not included" section — undefined scope leads to disputes after the proposal is accepted
-- [ ] Do not forget a "valid until" date — proposals without expiry create awkward situations and stale pricing
-- [ ] Do not list next steps without naming who is responsible for each and what the expected timeline is
+- [ ] Do not lead with the solution before establishing problem understanding
+- [ ] Do not use vague investment language — state a specific price or range
+- [ ] Do not omit a "not included" section — undefined scope leads to disputes
+- [ ] Do not forget a "valid until" date — proposals without expiry go stale
+- [ ] Do not list next steps without naming who is responsible and the timeline
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill produces a full commercial proposal document. If the request is for a competitive comparison or objection handling sheet, use `sales-battlecard` instead.
+- If the ask is for a renewal negotiation document, use `renewal-playbook` — not this skill.
+
+**Known failure modes:**
+- Claude tends to write generic "Understanding Your Situation" sections when discovery context is thin. Always provide specific pain points from the discovery call, even as rough notes.
+- Pricing tables may be formatted incorrectly for copy-paste into Word or email. Review table markdown before sending.
+- "Valid until" date is sometimes omitted from output. Check before finalising — add it manually if missing.
+
+**Filipino/Asian market specifics:**
+- Philippine clients often share proposals internally before responding. Build the document to be self-explanatory to a reader who was not in the discovery call.
+- Avoid aggressive "valid until" dates shorter than 14 days for Philippine enterprise accounts — it can feel pressuring and damage the relationship.
+- Decision-making is often collective. Add a stakeholder summary section if multiple approvers are known.
+- Peso pricing (₱) should be stated explicitly — do not assume USD unless confirmed.
 
 ## Example Trigger Phrases
 - "Write a proposal for [prospect] to [solve their problem]"
