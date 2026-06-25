@@ -1,0 +1,61 @@
+# OS artifacts
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.cursor/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.npm/
+
+# Logs
+*.log
+logs/
+
+# Environment files — never commit credentials
+.env
+.env.*
+!.env.example
+
+# Temporary files
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Zip artifacts — skill files are committed as folders, not zips
+*.zip
+*.tar.gz
+
+# Skill packaging artifacts
+*.skill
+
+# Session state files — local only, not for repo
+SESSION_STATE.md
