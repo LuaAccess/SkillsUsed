@@ -1,15 +1,18 @@
 ---
 name: go-to-market
-description: "Create go-to-market assets for a product, service, or practice launch. Use when asked for a GTM plan, positioning statement, product or service launch plan, messaging pillars, use cases, or feature/benefit list. Also triggers on: how do we position our [service], entering a new market or vertical, launch our [practice area], how should we pitch [service] to [industry], messaging for [offering]. Applies to both client GTM work and internal service positioning for IT consulting practices. Generates a full GTM pack: positioning statement, messaging pillars, feature-to-benefit mapping, and role-specific use cases."
+description: "Create go-to-market assets for any product or feature. Use when asked for a GTM plan, positioning statement, product launch plan, messaging pillars, use cases, or feature/benefit list. Produces a full GTM pack: positioning statement, messaging pillars, feature-to-benefit mapping, and role-specific use cases."
 ---
 
 # Go-To-Market Skill
 
-This skill produces a complete go-to-market asset pack for a product, feature, or initiative. It follows Geoffrey Moore's positioning framework and structures all outputs for use in sales decks, landing pages, launch emails, and internal alignment docs.
+Produces a complete go-to-market asset pack for a product, feature, or initiative. Follows Geoffrey Moore's positioning framework and structures all outputs for use in sales decks, landing pages, launch emails, and internal alignment docs.
 
-## Required Inputs
+## Working from a brief
 
-Ask the user for these if not provided:
+Always deliver the full GTM pack anyway — do not stop to ask questions and do not leave bracketed placeholders. Where a detail is missing, infer specific, realistic ones from the product description and target customer, and mark anything inferred as *(assumed — confirm)*.
+
+## Inputs (infer any not provided — label assumptions)
+
 - **Product/feature name**
 - **One-line description** (what it does, technically)
 - **Target customer** (role, company size, industry if relevant)
@@ -19,86 +22,86 @@ Ask the user for these if not provided:
 
 ## Output Structure
 
-Always produce all four sections below in order.
-
----
-
 ### 1. Positioning Statement
 
 Use the Geoffrey Moore format exactly:
 
 > For **[target customer]** who **[has this problem or need]**, **[Product Name]** is a **[product category]** that **[key benefit/outcome]**. Unlike **[primary alternative or competitor]**, our product **[key differentiator]**.
 
-Write one primary positioning statement, then offer a shorter tagline version (10 words or fewer) suitable for a hero headline.
+Write one primary positioning statement, then offer a shorter tagline version (10 words or fewer).
 
 ---
 
 ### 2. Messaging Pillars
 
 Generate 3–5 messaging pillars. Each pillar must include:
-
 - **Pillar name** (2–4 words, bold)
 - **One-sentence summary** of what this pillar claims
-- **2–3 proof points** (specific, evidence-backed where possible — if the user hasn't provided data, flag with [ADD PROOF POINT])
+- **2–3 proof points** (specific; if no data was provided, infer a realistic one and mark it *(assumed)*)
 - **Example use in copy** (one sentence as it would appear in a landing page or deck)
-
-Pillars should be distinct — avoid overlap. Each pillar should be defensible against the primary competitor.
 
 ---
 
 ### 3. Feature & Functionality List
 
-Produce a two-column table:
-
 | Feature / Functionality | Buyer Benefit (what it means for the user) |
 |---|---|
-| [Technical capability] | [Outcome in plain language — start with a verb: "Reduces...", "Enables...", "Eliminates..."] |
+| [Technical capability] | [Outcome in plain language — start with a verb] |
 
 Rules:
 - Never list a feature without a corresponding benefit
 - Benefits should reference the target customer's workflow or pain point
-- Aim for 6–12 rows; ask the user for more features if they've only given 1–2
-- Avoid jargon in the benefit column — write as if explaining to a buyer, not an engineer
+- Aim for 6–12 rows
+- Avoid jargon in the benefit column
 
 ---
 
 ### 4. Use Cases
 
-Generate 3–5 role-specific use cases. Each use case must follow this format:
+Generate 3–5 role-specific use cases. Each must follow this format:
 
 **Use Case [N]: [Role] — [Scenario Title]**
-
 - **Who:** [Job title / role]
 - **Situation:** [The specific moment or trigger that leads them to use the product]
-- **Before:** [What they had to do without this product — be specific about time, friction, or risk]
-- **With [Product Name]:** [What they do now — concrete action, not vague benefit]
+- **Before:** [What they had to do without this product]
+- **With [Product Name]:** [What they do now — concrete action]
 - **Outcome:** [Measurable or tangible result]
-
-Use cases should cover different buyer personas if possible (e.g. end user, manager, admin).
 
 ---
 
 ## Quality Checks
 
-Before delivering output, verify:
 - [ ] Positioning statement follows Moore format exactly
 - [ ] Tagline is 10 words or fewer
-- [ ] Each pillar has at least 2 proof points (or flagged placeholders)
+- [ ] Each pillar has at least 2 proof points (or flagged assumptions)
 - [ ] Every feature has a benefit — no orphaned features
 - [ ] Benefits start with action verbs
 - [ ] Use cases include a Before/After structure
-- [ ] Language is consistent with the target customer's vocabulary (not internal engineering terms)
 
 ## Anti-Patterns
 
-- [ ] Do not write feature descriptions instead of benefits — the GTM pack must translate features into customer value
-- [ ] Do not use the same messaging across all buyer personas — each role has different priorities and language
-- [ ] Do not create a positioning statement that could apply to any competitor — differentiation must be specific and defensible
-- [ ] Do not skip the "not for" section — defining who this is not for sharpens positioning and prevents misdirected sales effort
-- [ ] Do not list use cases without tying them to specific job titles or buyer roles
+- [ ] Do not write feature descriptions instead of benefits
+- [ ] Do not use the same messaging across all buyer personas
+- [ ] Do not create a positioning statement that could apply to any competitor
+- [ ] Do not list use cases without tying them to specific job titles
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill produces GTM assets for launch or positioning. For a competitive one-pager for sales reps, use `sales-battlecard`. For a full competitive market analysis, use `competitor-teardown`.
+- If the request is for an internal executive briefing rather than external GTM assets, use `executive-update`.
+
+**Known failure modes:**
+- Proof points in messaging pillars are often vague or assumed without being labelled. Prompt: "Mark any proof point that is inferred as *(assumed — verify)*."
+- Positioning statement sometimes uses generic category descriptions ("a platform that helps you..."). Prompt: "Make the product category and differentiator as specific as possible — avoid generic platform language."
+- Use cases are sometimes written for the same persona with minor variations. Prompt: "Cover at least 3 different roles in the use cases — include a technical buyer, a business buyer, and an end user."
+
+**Filipino/Asian market specifics:**
+- Philippine B2B buyers respond more to outcome-based messaging than feature lists. In the messaging pillars, lead with business outcomes (cost saved, risk reduced, time saved) over technical capabilities.
+- Taglines and positioning statements that work in English may not resonate in Filipino-language markets. If your target includes local government or SME segments, note that a Tagalog or Taglish version may be needed.
+- Use cases for Philippine enterprise accounts should reference local business contexts — not generic Western examples. Replace "Fortune 500" or "enterprise" with references to conglomerates, telcos, BPOs, or government agencies where relevant.
 
 ## Example Trigger Phrases
-
 - "Create a positioning statement for [product]"
 - "Write a GTM plan for [feature]"
 - "Give me key pillars for [product name]"
