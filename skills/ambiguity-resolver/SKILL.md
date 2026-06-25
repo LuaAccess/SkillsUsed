@@ -19,21 +19,19 @@ Ask the user for these if not provided:
 ### Stage 1: Reframe
 - Restate the vague input as 3-5 explicit questions that need answering
 - Identify the unstated assumptions hidden in the brief
-- Surface the real decision this feeds into (what will someone do differently once this is resolved?)
+- Surface the real decision this feeds into
 
 ### Stage 2: Scope
 - Define what is explicitly IN scope
-- Define what is explicitly OUT of scope (equally important)
-- Identify the deadline pressure: is this urgent/important, important/not urgent, or unclear?
+- Define what is explicitly OUT of scope
+- Identify the deadline pressure: urgent/important, important/not urgent, or unclear?
 - Name who owns the final decision and who needs to be consulted
 
 ### Stage 3: Action
-- Define the minimum viable research: 2-3 activities maximum that would give enough signal to move forward with confidence
+- Define the minimum viable research: 2-3 activities maximum
 - Time estimate for each activity
 - What each activity would tell you (and what it wouldn't)
 - Proposed check-in point: when to regroup before committing to more
-
-**Validate** — Confirm every reframed question maps to at least one research activity. Verify scope boundaries are specific enough to say "no" to something concrete.
 
 ## Output Structure
 
@@ -55,33 +53,43 @@ Ask the user for these if not provided:
 
 **Minimum viable research:**
 | Activity | Time required | What it tells us | What it won't tell us |
-|----------|--------------|------------------|-----------------------|
+|---|---|---|---|
 | [activity] | [time] | [insight] | [limitation] |
 
 **Proposed check-in:** After [activity], regroup to decide whether to proceed or pivot.
 
-## Example (Partial)
+## Quality Checks
 
-Input: *"We need to figure out what to do about our enterprise customers."*
-
-**Restated as questions:**
-1. Are enterprise customers churning, underperforming on expansion, or both?
-2. Is this a product gap, a support/service gap, or a pricing/packaging issue?
-3. What does "do something" look like — a new initiative, a policy change, or a resource shift?
-
-**In scope:** Enterprise accounts ($50K+ ARR) showing declining health scores in the last two quarters
-**Out of scope:** SMB segment, new enterprise acquisition strategy
+- [ ] Every reframed question is specific enough to research
+- [ ] Scope boundaries name something concrete that is excluded
+- [ ] Research activities are achievable within the stated timeline
+- [ ] Decision owner is identified — not "leadership" but a specific person or role
 
 ## Anti-Patterns
 
-- [ ] Do not reframe the brief into questions that are still too broad to research — each reframed question must be answerable by a specific activity
-- [ ] Do not list a research activity without stating what it would tell you and what it would NOT tell you
-- [ ] Do not leave the decision owner as "leadership" or "the team" — name a specific person or role
-- [ ] Do not omit an explicit out-of-scope boundary — without it, scope will expand organically and the brief becomes meaningless
+- [ ] Do not reframe the brief into questions that are still too broad to research
+- [ ] Do not list a research activity without stating what it would NOT tell you
+- [ ] Do not leave the decision owner as "leadership" or "the team"
+- [ ] Do not omit an explicit out-of-scope boundary
 
-## Quality Checks
+## Gotchas
 
-- [ ] Every reframed question is specific enough to research (not "how do we improve things?")
-- [ ] Scope boundaries name something concrete that is excluded
-- [ ] Research activities are achievable within the stated timeline
-- [ ] Decision owner is identified (not "leadership" — a specific person or role)
+**Trigger conflicts:**
+- This skill is for structuring unclear problems before execution. If the brief is already clear and the ask is for a plan, use `gated-phase-plan` instead.
+- If the vague brief is about a competitive landscape, route to `competitor-teardown` after running this skill to structure the question.
+
+**Known failure modes:**
+- Reframed questions are sometimes still too broad ("What is the best approach?"). Prompt: "Make each reframed question answerable by a specific research activity — if it's not researchable, it's too broad."
+- Scope boundaries are often vague ("everything related to X"). Prompt: "Name one specific thing that is explicitly out of scope for this brief."
+- Decision owner is frequently left as "the team" or "management." Prompt: "Who specifically will be making the final call? Name a role or person."
+
+**Filipino/Asian market specifics:**
+- In Philippine corporate culture, vague briefs often come from a superior who does not want to be seen as not knowing the answer. The real question is often unstated because asking it directly would be uncomfortable. Probe the brief with: "What decision is this feeding into — and who will be in the room when that decision is made?"
+- "Let's explore options" from a Philippine executive often means "I already have a preferred option but want validation." Identify the preferred option early and test it explicitly in your reframing.
+- Scope definition is culturally harder in Philippine teams because saying "that's out of scope" can feel like a refusal. Frame scope boundaries as focus, not refusal: "To give you the best answer on X, we'll focus here first."
+
+## Example Trigger Phrases
+- "Help me make sense of this brief: [paste brief]"
+- "We need to figure out what to do about [topic]"
+- "I've been asked to look into [area] — where do I start?"
+- "This is unclear — can you help me structure it?"
