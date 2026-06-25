@@ -1,6 +1,6 @@
 ---
 name: executive-update
-description: "Write a concise executive-level briefing for a client, stakeholder, or leadership audience. Use when asked to write an executive update, executive summary for a client, leadership update, project status for C-suite, board-level update on an engagement, or brief the CTO/CEO/leadership on a project or account. Also triggers on: exec summary, update for the board, senior stakeholder update, project health for leadership. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps."
+description: "Transform detailed product or project updates into concise executive briefings. Use when asked to write an executive update, leadership update, product update for the exec team, or a C-suite briefing. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps."
 ---
 
 # Executive Update Skill
@@ -22,16 +22,15 @@ Ask the user for these if not provided:
 - Be honest about risks — executives hate surprises more than bad news
 
 ## Process
-1. Read the full product update provided
+1. Read the full update provided
 2. Identify: key metric movements, decisions required, risks to flag, wins to celebrate
 3. Write in reverse pyramid style — most important first
 4. Limit to 250 words maximum for the main body
 5. Add a "Decisions Needed" section with clear options and your recommendation
-6. **Validate** — Confirm every decision needed has a specific option and recommendation (not just "TBD"), and every risk has a mitigation or watch plan
 
 ## Output Structure
 
-### Product Update — [Date / Sprint / Month]
+### [Project/Product] Update — [Date / Sprint / Month]
 **Headline:** [One sentence on the most important thing]
 
 **By the Numbers:**
@@ -61,8 +60,29 @@ Ask the user for these if not provided:
 
 ## Anti-Patterns
 
-- [ ] Do not lead with context or background — executives read the headline first; bury the important thing below two sentences of setup and they will miss it
-- [ ] Do not present metrics without a comparison point — a number without context (vs. target, vs. last period) cannot be interpreted and will prompt follow-up questions
-- [ ] Do not soften or spin risks — executives rely on these updates to make resource and escalation decisions; sanitised risk sections destroy the update's utility
-- [ ] Do not present a "Decisions Needed" item without a recommendation — asking an executive to decide without your view forces them to do the analytical work the PM should have done
-- [ ] Do not exceed 250 words in the main body — length signals the author has not done the compression work; every word over 250 reduces the chance the update is read
+- [ ] Do not lead with context or background — lead with the headline
+- [ ] Do not present metrics without a comparison point
+- [ ] Do not soften or spin risks — executives rely on these for resource decisions
+- [ ] Do not present a "Decisions Needed" item without a recommendation
+- [ ] Do not exceed 250 words in the main body
+
+## Gotchas
+
+**Trigger conflicts:**
+- This skill produces a short briefing document (250 words). For a full status report with KPIs and project health, use `operations:status-report` instead.
+- If the audience is a customer (not internal), use `qbr-deck` or `proposal-writer`.
+
+**Known failure modes:**
+- Claude often exceeds 250 words on first pass. After generating, explicitly prompt: "Count the words in the main body — trim to 250 if over."
+- Decisions Needed section is sometimes left as a single option with no recommendation. Prompt: "Add a second option and state your recommendation explicitly."
+- Risk section is frequently sanitised — Claude defaults to soft language. Prompt: "Rewrite the risks section without softening — state the actual risk plainly."
+
+**Filipino/Asian market specifics:**
+- Philippine executives often share these updates with counterparts outside the organisation. Write as if it may be forwarded — do not include politically sensitive internal commentary.
+- Hierarchy matters in how risks are framed. For briefings going to a Filipino CEO or board, frame risks as "areas we are managing" rather than "things that are wrong" — directness without confrontation is the register to hit.
+- If the update is for a government-linked entity, avoid any language that implies criticism of past decisions — even implied criticism damages relationships in this context.
+
+## Example Trigger Phrases
+- "Write an executive update on [project/product] for this week"
+- "Turn these notes into a leadership briefing"
+- "Summarise this sprint for the C-suite"
