@@ -1,0 +1,31 @@
+name: Morning Work Brief
+
+on:
+  schedule:
+    - cron: '0 22 * * 1-5'  # 6:00 AM PHT Monday-Friday only
+  workflow_dispatch:          # Manual trigger for testing
+
+jobs:
+  deliver-work-brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11  # v4.1.1 SHA-pinned
+
+      - name: Set up Python
+        uses: actions/setup-python@65d7f2d534ac1bc67fcd62888c5f4f3d2cb2b236  # v4.7.1 SHA-pinned
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests python-dateutil
+
+      - name: Run work brief pipeline
+        run: python scripts/work_brief.py
+        env:
+          MS_GRAPH_TOKEN: ${{ secrets.MS_GRAPH_TOKEN }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
