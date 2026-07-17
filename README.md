@@ -2,8 +2,8 @@
 
 Hardened fork of selected skills from [mohitagw15856/pm-claude-skills](https://github.com/mohitagw15856/pm-claude-skills), extended with IT consulting workflow skills and session management protocols.
 
-**Maintained by:** LuaAccess  
-**Upstream:** `mohitagw15856/pm-claude-skills` (MIT License)  
+**Maintained by:** LuaAccess
+**Upstream:** `mohitagw15856/pm-claude-skills` (MIT License)
 **Market context:** Philippines / Southeast Asia IT consulting and sales
 
 ---
@@ -23,6 +23,13 @@ Hardened fork of selected skills from [mohitagw15856/pm-claude-skills](https://g
 | Skill | Purpose |
 |---|---|
 | `account-plan` | Strategic account planning with relationship map and 90-day actions |
+
+### Client Intelligence & CRM
+
+| Skill | Purpose |
+|---|---|
+| `meeting-intelligence` | Post-meeting debrief — hidden signals, power map, performance audit, next moves |
+| `crm-hygiene` | Turns a debrief or call notes into concrete CRM updates (deal stage, contacts, tasks) |
 
 ### Client Success
 
@@ -50,16 +57,16 @@ Hardened fork of selected skills from [mohitagw15856/pm-claude-skills](https://g
 
 | Skill | Purpose |
 |---|---|
-| `discovery-interview-guide` | User/client discovery interview guides with synthesis framework |
+| `user-research-guide` | User/client discovery interview guides with synthesis framework *(renamed from `discovery-interview-guide` — name collided with `discovery-call-prep`)* |
 
-### Workflow & Session Management *(new)*
+### Workflow & Session Management
 
 | Skill | Purpose |
 |---|---|
 | `gated-phase-plan` | Phase-wise implementation plans with explicit pass/fail gate tests |
 | `context-rot-protocol` | Session health management, handoff protocol, rewind procedure |
 | `fresh-context-review` | Pre-execution review using a clean context to catch missed errors |
-| `screenshot-debug` | Structured debug protocol using screenshots for visual state capture |
+| `screenshot-debug` | Structured debug protocol using screenshots for visual/UI state capture |
 
 ---
 
@@ -74,7 +81,7 @@ skills/
 ```
 
 Every SKILL.md contains:
-- **YAML frontmatter** — `name` and `description` (triggers Claude to load the skill)
+- **YAML frontmatter** — `name` and `description` (triggers Claude to load the skill). **Any mutual-exclusion / "Do NOT use" logic must live in the description, not just the Gotchas section** — description + name is all Claude sees before deciding to fire a skill; exclusions buried only in the body don't prevent mis-triggering.
 - **Required inputs** — what to provide for best output
 - **Output structure** — the deliverable format
 - **Quality checks** — pre-submit checklist
@@ -90,20 +97,36 @@ Some skills have overlapping scope. Use this table to route correctly:
 | Situation | Use this skill |
 |---|---|
 | New prospect, first call | `discovery-call-prep` |
-| User research / problem validation interviews | `discovery-interview-guide` |
+| User research / problem validation interviews | `user-research-guide` |
 | Write a commercial proposal | `proposal-writer` |
 | Quick one-page competitive cheat sheet for reps | `sales-battlecard` |
 | Deep strategic competitive analysis | `competitor-teardown` |
 | Existing customer account strategy | `account-plan` |
-| Upcoming renewal — commercial strategy | `renewal-playbook` |
+| Post-meeting analysis / debrief | `meeting-intelligence` |
+| Update CRM after a meeting or call | `crm-hygiene` (run after `meeting-intelligence`) |
+| Upcoming renewal — commercial strategy | `renewal-playbook` (best after `cs-health-scorecard`) |
 | Score account health first | `cs-health-scorecard` → then `renewal-playbook` |
 | QBR presentation for customer | `qbr-deck` |
 | Internal leadership briefing | `executive-update` |
+| Product/feature launch positioning (not competitor-specific) | `go-to-market` |
 | Vague brief needs structuring | `ambiguity-resolver` |
 | Planning a multi-step build | `gated-phase-plan` |
 | Session running long / picking up from previous session | `context-rot-protocol` |
 | Review a plan before executing | `fresh-context-review` |
-| Stuck and need visual debugging | `screenshot-debug` |
+| Stuck and need visual/UI debugging (screenshot) | `screenshot-debug` |
+| Code error, stack trace, backend logic bug (no visual component) | `engineering:debug` (built-in plugin, not in this repo) |
+
+---
+
+## Chained workflows
+
+Some skills are designed to run in sequence rather than standalone:
+
+```
+meeting-intelligence → crm-hygiene → renewal-playbook / proposal-writer / account-plan
+cs-health-scorecard → renewal-playbook
+gated-phase-plan → fresh-context-review → (execute) → screenshot-debug (if stuck)
+```
 
 ---
 
