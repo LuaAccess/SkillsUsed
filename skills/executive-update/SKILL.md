@@ -1,6 +1,6 @@
 ---
 name: executive-update
-description: "Transform detailed product or project updates into concise executive briefings. Use when asked to write an executive update, leadership update, product update for the exec team, or a C-suite briefing. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps."
+description: "Transform detailed product or project updates into concise executive briefings. Use when asked to write an executive update, leadership update, product update for the exec team, or a C-suite briefing. Produces a structured 250-word briefing with headline, key metrics, progress, risks, decisions needed, and next steps. Do NOT use for a full project status report with KPIs — use operations:status-report instead. Do NOT use when the audience is an external customer — use qbr-deck or proposal-writer instead."
 ---
 
 # Executive Update Skill
