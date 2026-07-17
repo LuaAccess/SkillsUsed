@@ -110,7 +110,7 @@ This call is NOT successful if we only pitched and got "sounds interesting, send
 ## Gotchas
 
 **Trigger conflicts:**
-- This skill and `discovery-interview-guide` both involve structured questioning. Use THIS skill for sales/prospect calls with new prospects. Use `discovery-interview-guide` for user research and problem validation interviews with existing users.
+- This skill and `user-research-guide` both involve structured questioning. Use THIS skill for sales/prospect calls with new prospects. Use `user-research-guide` for user research and problem validation interviews with existing users.
 - If the contact is an existing customer, stop — use `renewal-playbook` or `qbr-deck` instead.
 
 **Known failure modes:**
