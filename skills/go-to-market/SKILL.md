@@ -1,6 +1,6 @@
 ---
 name: go-to-market
-description: "Create go-to-market assets for any product or feature. Use when asked for a GTM plan, positioning statement, product launch plan, messaging pillars, use cases, or feature/benefit list. Produces a full GTM pack: positioning statement, messaging pillars, feature-to-benefit mapping, and role-specific use cases."
+description: "Create go-to-market assets for any product or feature. Use when asked for a GTM plan, positioning statement, product launch plan, messaging pillars, use cases, or feature/benefit list. Produces a full GTM pack: positioning statement, messaging pillars, feature-to-benefit mapping, and role-specific use cases. Do NOT use for a competitor-specific one-pager — use sales-battlecard instead. Do NOT use for deep competitive market analysis — use competitor-teardown instead. Do NOT use for an internal leadership briefing — use executive-update instead."
 ---
 
 # Go-To-Market Skill
