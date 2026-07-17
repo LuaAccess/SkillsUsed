@@ -1,7 +1,6 @@
-
 ---
 name: meeting-intelligence
-description: Post-meeting debrief and analysis for IT consulting and sales meetings. Use when pasting meeting notes, transcript, or pipeline output after a client call, discovery session, stakeholder meeting, or sales meeting — especially when you want to extract hidden signals, decode client behaviour, map power dynamics, identify next moves, or audit your own performance. Trigger phrases include "MODE 1", "meeting debrief", "what just happened in that meeting", "analyse my meeting notes", "what did I miss", "decode this client", or any paste of raw meeting output for analysis. Do NOT use for scheduling meetings, drafting agendas, or preparing for a future meeting — those go to client-communication or legal:meeting-briefing.
+description: Post-meeting debrief and analysis for IT consulting and sales meetings. Use when pasting meeting notes, transcript, or pipeline output after a client call, discovery session, stakeholder meeting, or sales meeting — especially when you want to extract hidden signals, decode client behaviour, map power dynamics, identify next moves, or audit your own performance. Trigger phrases include "MODE 1", "meeting debrief", "what just happened in that meeting", "analyse my meeting notes", "what did I miss", "decode this client", or any paste of raw meeting output for analysis. Do NOT use for scheduling a future meeting or drafting an agenda — handle that directly, or use legal:meeting-briefing if the meeting has legal relevance. This skill's output feeds into crm-hygiene (log signals to CRM) and then renewal-playbook or proposal-writer depending on deal stage.
 argument-hint: "<paste meeting notes, transcript, or pipeline output>"
 ---
 
@@ -135,6 +134,7 @@ Generate 2–4 next-move options ranked by leverage:
 - Update deal stage and contact notes from this meeting
 - Log key signals as CRM activity
 - Flag if follow-up sequence needs to be triggered
+- For a full CRM hygiene pass (not just a quick note), hand off to `crm-hygiene` with this debrief's output as input
 
 **Notion:**
 - Save debrief output as a meeting intelligence note
