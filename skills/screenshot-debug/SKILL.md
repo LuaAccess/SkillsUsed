@@ -1,6 +1,6 @@
 ---
 name: screenshot-debug
-description: "Debug a stuck, broken, or unexpected situation by capturing and sharing a screenshot of the current state. Use when text descriptions of an error are not resolving the issue, when Claude needs to see what you're seeing, when UI behavior is unexpected, or when you're stuck and a screenshot would give more information than a text description. Triggers on: 'I'm stuck', 'it's not working', 'here's a screenshot', 'can you see what's wrong', or any situation where visual state matters more than a text description."
+description: "Debug a stuck, broken, or unexpected situation by capturing and sharing a screenshot of the current state. Use when text descriptions of an error are not resolving the issue, when Claude needs to see what you're seeing, when UI behavior is unexpected, or when you're stuck and a screenshot would give more information than a text description. Triggers on: 'I'm stuck', 'it's not working', 'here's a screenshot', 'can you see what's wrong', or any situation where visual state matters more than a text description. Do NOT use for code errors, stack traces, or backend logic bugs with no visual component — use engineering:debug instead; this skill is specifically for cases where seeing the screen (UI, a tool interface, a browser state) beats describing it in words."
 ---
 
 # Screenshot Debug Skill
@@ -111,6 +111,9 @@ Take a screenshot of the conversation rather than trying to describe the output 
 **Integration:**
 - Use this skill when a `gated-phase-plan` phase gate fails and the failure reason is unclear from text description alone
 - Use when `fresh-context-review` identifies a potential issue and you need to confirm whether it's actually present in the live state
+
+**Trigger conflicts:**
+- This skill is for visual/UI state — a tool interface, a browser, a rendered page. For code errors, stack traces, or backend logic bugs (even ones that surface as an error in a terminal), use `engineering:debug` instead — paste the text/log there rather than screenshotting it.
 
 ## Example Trigger Phrases
 - "I'm stuck — here's a screenshot"
