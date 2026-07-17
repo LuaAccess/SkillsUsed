@@ -1,6 +1,6 @@
 ---
 name: qbr-deck
-description: "Build a Quarterly Business Review (QBR) deck structure and narrative for a customer account. Use when asked to prepare a QBR, business review meeting, executive review, or quarterly check-in with a customer. Produces a slide-by-slide QBR structure with talking points, metrics review, value narrative, and mutual next steps."
+description: "Build a Quarterly Business Review (QBR) deck structure and narrative for a customer account. Use when asked to prepare a QBR, business review meeting, executive review, or quarterly check-in with a customer. Produces a slide-by-slide QBR structure with talking points, metrics review, value narrative, and mutual next steps. Do NOT use for the internal account strategy document — use account-plan instead. Do NOT use for renewal negotiation strategy — use renewal-playbook instead. Do NOT use for a first meeting with a new prospect — use discovery-call-prep instead."
 ---
 
 # QBR Deck Skill
