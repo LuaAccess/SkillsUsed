@@ -1,8 +1,8 @@
-
 ---
 name: client-communication
 description: Draft outbound messages to clients or prospects — emails, Teams messages, follow-up notes, meeting invites, or LinkedIn messages. Use when you need to write any message to a client, prospect, or stakeholder and want it calibrated for tone, relationship stage, and Filipino/Asian business culture. Trigger phrases include "draft an email to", "write a follow-up to", "message [client] about", "how do I say this to the client", "send a meeting invite for", "write a check-in to", "follow up on my proposal", or "I need to reach out to [person]". Do NOT use for internal status reports (operations:status-report), customer support ticket responses (customer-support:draft-response), or proposal documents (consulting-proposal).
-argument-hint: "<recipient, purpose, key points to include>"
+metadata:
+  argument-hint: "<recipient, purpose, key points to include>"
 ---
 
 # /client-communication
