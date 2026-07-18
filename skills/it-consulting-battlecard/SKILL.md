@@ -1,8 +1,8 @@
-
 ---
 name: it-consulting-battlecard
 description: Build a competitive battlecard or positioning guide for an IT consulting bid or sales situation. Use when competing against another system integrator, MSP, or technology vendor on a specific deal, when preparing for a competitive sales conversation, when a client mentions a competitor by name, or when you need to sharpen your differentiation for a specific account or segment. Trigger phrases include "we're competing against", "client mentioned [competitor]", "how do we beat [competitor]", "build a battlecard for", "competitive positioning for", "what's our edge vs", or "they also talked to [other vendor]". Do NOT use for general market research (superclaude:deep-research), full proposal writing (consulting-proposal), or brand monitoring (brightdata-plugin:brand-listening).
-argument-hint: "<competitor name or deal context>"
+metadata:
+  argument-hint: "<competitor name or deal context>"
 ---
 
 # /it-consulting-battlecard
@@ -23,8 +23,6 @@ Examples:
 - `/it-consulting-battlecard Build a general battlecard vs large SIs for mid-market PH clients`
 - `/it-consulting-battlecard How do we position against a cheaper local competitor with existing client relationship`
 
----
-
 ## Workflow
 
 ### 1. Competitive Context Intake
@@ -37,8 +35,6 @@ Parse or ask for:
 - **Known competitor strengths:** What you know they're leading with
 - **Client's likely evaluation criteria:** Price / brand / local presence / technical depth / relationship / speed
 - **Relationship dynamics:** Do they already have a relationship with the competitor
-
----
 
 ### 2. Competitor Profile
 
@@ -60,8 +56,6 @@ Parse or ask for:
 **How they typically lose:** [Slow delivery / Offshore resource quality / Lack of local support / Over-engineering]
 ```
 
----
-
 ### 3. Head-to-Head Comparison
 
 ```markdown
@@ -80,8 +74,6 @@ Parse or ask for:
 | Cultural fit / communication style | | | |
 ```
 
----
-
 ### 4. Positioning Strategy
 
 ```markdown
@@ -99,8 +91,6 @@ Parse or ask for:
 **Traps to avoid:**
 [Claims or comparison points that make you look weak or desperate]
 ```
-
----
 
 ### 5. Objection Responses
 
@@ -125,8 +115,6 @@ Response: [Scale of past projects ≠ fit for this engagement. Redirect to relev
 Response: [Don't fight the process. Position to be the reference point they compare others against — not one of three generic bids]
 ```
 
----
-
 ### 6. Cultural Power Dynamics in Competitive Bids
 
 Apply to every battlecard — do not skip this section:
@@ -150,8 +138,6 @@ PH clients often negotiate as a ritual, not a signal of disqualification. Know y
 Technical evaluators rarely have final say in PH enterprise. Map the real decision path: who signs off, who has veto power, who is politically invested in the incumbent.
 ```
 
----
-
 ### 7. Deal-Specific Battleplan
 
 ```markdown
@@ -163,8 +149,6 @@ Technical evaluators rarely have final say in PH enterprise. Map the real decisi
 **Message to land:** [The one thing they should believe about you vs. the competitor after your next conversation]
 **Red flags to watch for:** [Signs this deal is moving toward the competitor despite positive signals]
 ```
-
----
 
 ## If Connectors Available
 
@@ -179,8 +163,6 @@ Technical evaluators rarely have final say in PH enterprise. Map the real decisi
 **Notion:**
 - Save battlecard to your competitive intelligence knowledge base
 
----
-
 ## Philippine IT Consulting Competitive Landscape — Common Patterns
 
 | Competitor Type | How They Win | How They Lose | Your Counter |
@@ -191,8 +173,6 @@ Technical evaluators rarely have final say in PH enterprise. Map the real decisi
 | Regional SIs (regional APAC firms) | Competitive pricing + enterprise process | Less local presence, cultural gap | Local-first team, faster escalation path |
 | Freelancers / small IT shops | Cheap, flexible, fast | Risk, accountability, no SLA | Formal engagement, risk mitigation, accountability structure |
 | In-house IT team (as alternative) | Zero cost, internal knowledge | Capacity, skill gaps, political cover if it fails | Risk-transfer argument, speed, specialist depth |
-
----
 
 ## Tips
 
