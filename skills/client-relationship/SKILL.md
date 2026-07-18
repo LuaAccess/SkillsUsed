@@ -1,8 +1,8 @@
-
 ---
-name: client-relationship-tracker
+name: client-relationship
 description: Review, update, or act on client relationship and account health data across your CRM and connected apps. Use when checking where a deal stands, reviewing account health across your portfolio, planning follow-ups, identifying at-risk relationships, logging a client interaction, or doing a weekly account review. Trigger phrases include "how are my accounts", "where is [client] in the pipeline", "which clients need follow-up", "log this interaction", "account health check", "update HubSpot", "who haven't I spoken to", "CRM update", or "weekly account review". Do NOT use for drafting emails (client-communication), writing proposals (consulting-proposal), or customer support tickets (customer-support bundle).
-argument-hint: "[all accounts | specific client name | deal stage | this week's review]"
+metadata:
+  argument-hint: "[all accounts | specific client name | deal stage | this week's review]"
 ---
 
 # /client-relationship-tracker
