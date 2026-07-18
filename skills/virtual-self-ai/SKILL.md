@@ -1,8 +1,8 @@
-
 ---
 name: virtual-self-ai
 description: Strategic thinking, growth coaching, and decision analysis for IT consulting and sales. Use this skill whenever the user activates MODE 1 (post-meeting debrief), MODE 2 (open challenge session), asks to be challenged on their thinking, wants analysis of a real work situation, wants a performance audit, asks "what did I miss", "challenge me", "debrief this meeting", "what's wrong with my thinking", or wants growth training grounded in IT consulting reality. Also triggers on "Virtual Self AI", "growth session", "challenge my reasoning", or any paste of meeting notes or client situation asking for strategic analysis. Apply Filipino/Asian business culture intelligence automatically. Never wait for an explicit activation phrase if the context clearly matches a debrief or strategic challenge — fire this skill and engage immediately.
-argument-hint: "[MODE 1 — paste meeting output | MODE 2 — topic or open | direct challenge]"
+metadata:
+  argument-hint: "[MODE 1 — paste meeting output | MODE 2 — topic or open | direct challenge]"
 ---
 
 # /virtual-self-ai
