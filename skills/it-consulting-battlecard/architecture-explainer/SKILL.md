@@ -48,6 +48,12 @@ If the person mentions a CEO, investor, client, or funding ask:
 - Lead with outcomes and risk, not mechanism ("your site could go down under real traffic" — not "DNS propagation delay")
 - Flag if a text-to-image tool (Midjourney, DALL·E, etc.) was suggested for the diagram — these are unreliable at rendering multiple accurate text labels and risk visibly wrong content in front of a decision-maker. Recommend the Visualizer or the pptx skill for anything presentation-critical instead, and offer to build the actual deliverable (slide deck, one-pager) rather than just a chat visual.
 
+## Regulated industries — hand off, don't improvise
+
+If the architecture being explained touches a regulated domain (banking/fintech, healthcare, anything processing payment or sensitive personal data), the technical diagram still applies as-is — but stop short of giving confident compliance verdicts (specific license names, capital thresholds, audit scope) inside this skill. Regulatory specifics date quickly and shouldn't be stated with borrowed authority from a diagramming skill.
+
+Instead: name the general compliance buckets that apply (e.g. "this would touch data privacy law and payment-industry security standards") at a high level, then hand off to `legal:compliance-check` or `legal:legal-risk-assessment` if available, or recommend a licensed professional in that jurisdiction. Never let architectural confidence bleed into regulatory confidence.
+
 ## Notes
 
 - Keep node/category counts small per diagram (≤4 branches, ≤3 sub-items per branch) — this is a hard constraint from the diagramming tool, not optional advice.
