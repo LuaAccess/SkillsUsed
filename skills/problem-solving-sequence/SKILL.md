@@ -1,7 +1,6 @@
-
 ---
 name: problem-solving-sequence
-description: Run a structured 5-stage problem-solving sequence (Diagnose → Compare → Reframe → Create → Validate) using 20 named frameworks (Fishbone, 5 Whys, First Principles, Force Field, Decision Matrix, Cost-Benefit, MECE, Six Thinking Hats, Inversion, Lateral Thinking, Analogous Reasoning, Counterfactual Reasoning, SCAMPER, TRIZ, Blue Ocean, Prototyping, Hypothesis Testing, Pre-Mortem, OODA Loop, SWOT). Use this whenever the user wants to brainstorm a decision, analyze a data/prediction system, evaluate multiple candidate strategies or approaches, or explicitly says "run the sequence," "diagnose this," "let's brainstorm this properly," or references any of the 20 named frameworks above. Especially trigger when the user has real data/backtest results and wants to decide which of several approaches actually wins, rather than picking by preference.
+description: Run a structured 5-stage problem-solving sequence (Diagnose → Compare → Reframe → Create → Validate) using 20 named frameworks (Fishbone, 5 Whys, First Principles, Force Field, Decision Matrix, Cost-Benefit, MECE, Six Thinking Hats, Inversion, Lateral Thinking, Analogous Reasoning, Counterfactual Reasoning, SCAMPER, TRIZ, Blue Ocean, Prototyping, Hypothesis Testing, Pre-Mortem, OODA Loop, SWOT). Use this whenever the user wants to brainstorm a decision, analyze a data/prediction system, evaluate multiple candidate strategies or approaches, or explicitly says "run the sequence," "diagnose this," "let's brainstorm this properly," or references any of the 20 named frameworks above. Especially trigger when the user has real data/backtest results and wants to decide which of several approaches actually wins, rather than picking by preference. ALSO trigger in Quick Ideation Mode, a lighter single-pass path rather than the full 5 stages, when the user wants fast idea generation instead of rigorous decision analysis, "quick brainstorm," "give me ideas fast," "master brainstorm," "trend intersection," "competitor gap," "content ideas for [platform]," or "business opportunity brainstorm." Mutual exclusion, if the user wants speed over rigor, route to Quick Ideation Mode and skip Stages 1-5, do not run both for the same request.
 ---
 
 # Problem-Solving Sequence
@@ -87,6 +86,20 @@ Don't let the most articulate-sounding idea win by default. Instead:
 2. Score using **one consistent metric** — flag if two candidates are being compared using different definitions of "success"
 3. Anything that doesn't beat the Stage 3 baseline gets cut, regardless of how clever the technique that produced it
 4. Log which framework produced the winning idea — useful for noticing which techniques are actually generative for this user over time
+
+## Quick Ideation Mode (skip the 5 stages)
+
+For fast idea generation where speed beats rigor — a pitch angle, a content idea, a quick gap check. Don't run Stages 1-5 for these; one pass is the point. Each row is a self-contained prompt structure, not a multi-step process.
+
+| Framework | Use it to... | Prompt shape |
+|---|---|---|
+| **Master Brainstorm System** | Generate a full idea set in one pass when objective, audience, and constraints are all known upfront | "Goal: [OBJECTIVE]. Audience: [TARGET USERS]. Constraints: [LIMITATIONS]." → generate, rank by ROI/scalability/effort, pick top 10 |
+| **Trend Intersection** | Find novel combos by overlapping two unrelated topics/trends | "Brainstorm ideas at the intersection of [TOPIC A] + [TOPIC B]" → surface hybrid/unexpected combinations |
+| **Competitor Gap** | Spot positioning openings fast | "Topic: [TOPIC]. Identify competitors, strengths/weaknesses, gaps they leave open" → cheap differentiation angles |
+| **Content Brainstorm** | Fill a content calendar by platform/audience | "Generate content ideas around [TOPIC]. Audience: [AUDIENCE]. Platform: [PLATFORM]." → mix of educational, story, case-study formats |
+| **Business Opportunity Brainstorm** | Frame a raw idea as a startup-style opportunity | "Topic: [TOPIC]. Generate business opportunities: SaaS, agency, consulting, marketplace, subscription angles" → estimate size, difficulty, growth potential |
+
+**When NOT to use Quick Mode:** if the user has real data to validate against, multiple candidates competing for resources, or explicitly wants rigor — route to the full 5-stage sequence instead. Quick Mode skips Stage 5 validation entirely, so nothing generated here should be treated as decided — only as raw material to feed into Stage 2+ if it needs to survive scrutiny.
 
 ## How to run this conversationally
 
