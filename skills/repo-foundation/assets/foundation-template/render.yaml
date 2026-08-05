@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: {{PROJECT_NAME}}
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.11.0   # pin — do not leave on "latest"
+      - key: DB_DIR
+        value: /var/{{PROJECT_NAME}}-data   # MUST be the mounted disk path below, never a source-tree path
+    disk:
+      name: {{PROJECT_NAME}}-disk
+      mountPath: /var/{{PROJECT_NAME}}-data
+      sizeGB: 1
